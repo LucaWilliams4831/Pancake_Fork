@@ -335,7 +335,7 @@ export const SmartSwapForm: React.FC<{ handleOutputSelect: (newCurrencyOutput: C
       />
       <CurrencyInputHeader
         title={t('Swap')}
-        subtitle={t('Trade tokens in an instant')}
+        subtitle={t('')}
         hasAmount={hasAmount}
         onRefreshPrice={onRefreshPrice}
       />
@@ -396,11 +396,11 @@ export const SmartSwapForm: React.FC<{ handleOutputSelect: (newCurrencyOutput: C
             commonBasesType={CommonBasesType.SWAP_LIMITORDER}
           />
 
-          {isAccessTokenSupported && outputCurrency?.isToken && (
+          {/* {isAccessTokenSupported && outputCurrency?.isToken && (
             <Box>
               <AccessRisk token={outputCurrency} />
             </Box>
-          )}
+          )} */}
 
           {isSmartRouterBetter && !isStableSwapByDefault && (
             <AutoColumn>
@@ -438,7 +438,7 @@ export const SmartSwapForm: React.FC<{ handleOutputSelect: (newCurrencyOutput: C
             </>
           ) : null}
 
-          {showWrap ? null : (
+          {/* {showWrap ? null : (
             <SwapUI.Info
               price={
                 (Boolean(tradeInfo) || Boolean(mmTradeInfo)) && (
@@ -458,7 +458,7 @@ export const SmartSwapForm: React.FC<{ handleOutputSelect: (newCurrencyOutput: C
                 isMMBetter || (!v2Trade && isMMQuotingPair && !isExpertMode) ? <MMSlippageTolerance /> : undefined
               }
             />
-          )}
+          )} */}
         </AutoColumn>
 
         <Box mt="0.25rem">

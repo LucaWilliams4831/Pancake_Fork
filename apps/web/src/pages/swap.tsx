@@ -15,9 +15,9 @@ const Video = styled.video`
 const SwapPage = () => {
   return (
     <SwapFeaturesProvider>
-      <Video autoPlay loop muted>
+      {/* <Video autoPlay loop muted>
         <source src="./back.mp4" type="video/mp4" />
-      </Video>
+      </Video> */}
       <Swap />
     </SwapFeaturesProvider>
   )

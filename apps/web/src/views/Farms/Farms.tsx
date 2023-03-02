@@ -355,28 +355,28 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <FarmsContext.Provider value={providerValue}>
       <PageHeader>
-        <FarmFlexWrapper justifyContent="space-between">
+        <FarmFlexWrapper justifyContent="center">
           <Box>
-            <FarmH1 as="h1" scale="xxl" color="secondary" mb="24px">
+            <FarmH1 as="h1" scale="xxl" color="secondary" mb="24px" >
               {t('Farms')}
             </FarmH1>
             <FarmH2 scale="lg" color="text">
               {t('Stake LP tokens to earn.')}
             </FarmH2>
-            <NextLinkFromReactRouter to="/farms/auction" prefetch={false}>
+            {/* <NextLinkFromReactRouter to="/farms/auction" prefetch={false}>
               <Button p="0" variant="text">
                 <Text color="primary" bold fontSize="16px" mr="4px">
                   {t('Community Auctions')}
                 </Text>
                 <ArrowForwardIcon color="primary" />
               </Button>
-            </NextLinkFromReactRouter>
+            </NextLinkFromReactRouter> */}
           </Box>
-          {chainId === ChainId.BSC && (
+          {/* {chainId === ChainId.BSC && (
             <Box>
               <BCakeBoosterCard />
             </Box>
-          )}
+          )} */}
         </FarmFlexWrapper>
       </PageHeader>
       <Page>
@@ -386,7 +386,7 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
               <ToggleView idPrefix="clickFarm" viewMode={viewMode} onToggle={setViewMode} />
             </Flex>
             <FarmUI.FarmTabButtons hasStakeInFinishedFarms={stakedInactiveFarms.length > 0} />
-            <Flex mt="20px" ml="16px">
+            {/* <Flex mt="20px" ml="16px">
               <FarmTypesFilter
                 boostedOnly={boostedOnly}
                 handleSetBoostedOnly={setBoostedOnly}
@@ -404,10 +404,10 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
                 />
                 <Text> {t('Staked only')}</Text>
               </ToggleWrapper>
-            </Flex>
+            </Flex> */}
           </ViewControls>
           <FilterContainer>
-            <LabelWrapper>
+            {/* <LabelWrapper>
               <Text textTransform="uppercase" color="textSubtle" fontSize="12px" bold>
                 {t('Sort by')}
               </Text>
@@ -440,7 +440,7 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
                 ]}
                 onOptionChange={handleSortOptionChange}
               />
-            </LabelWrapper>
+            </LabelWrapper> */}
             <LabelWrapper style={{ marginLeft: 16 }}>
               <Text textTransform="uppercase" color="textSubtle" fontSize="12px" bold>
                 {t('Search')}

@@ -173,6 +173,8 @@ const Row: React.FunctionComponent<React.PropsWithChildren<RowPropsWithLoading>>
                     </CellInner>
                   </td>
                 )
+                case 'multiplier':
+                  break;
               default:
                 return (
                   <td key={key}>

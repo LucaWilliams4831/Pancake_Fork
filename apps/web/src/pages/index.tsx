@@ -1,5 +1,5 @@
 import { formatEther } from '@ethersproject/units'
-import { Farm } from '@pancakeswap/uikit'
+import { Swap } from '@pancakeswap/uikit'
 import { getUnixTime, sub } from 'date-fns'
 import { gql } from 'graphql-request'
 import { GetStaticProps } from 'next'
@@ -8,7 +8,6 @@ import { getCakeVaultAddress } from 'utils/addressHelpers'
 import { getCakeContract } from 'utils/contractHelpers'
 import { getBlocksFromTimestamps } from 'utils/getBlocksFromTimestamps'
 import { bitQueryServerClient, infoServerClient } from 'utils/graphql'
-import { SwapFeaturesProvider } from 'views/Swap/SwapFeaturesContext'
 import SwapPage from './swap'
 
 const IndexPage = ({ totalTx30Days, addressCount30Days, tvl }) => {
@@ -21,8 +20,9 @@ const IndexPage = ({ totalTx30Days, addressCount30Days, tvl }) => {
           tvl,
         },
       }}
-    >
+    >      
       <SwapPage />
+      
     </SWRConfig>
   )
 }
