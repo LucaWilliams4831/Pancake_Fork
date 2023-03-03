@@ -12,7 +12,7 @@ export const baseColors = {
   warning: '#FFB237',
   warning2D: '#ED4B9E2D',
   warning33: '#ED4B9E33',
-  backgroundTrade: '#24132d',
+  backgroundSubMenu: '#4b3557',
 }
 
 export const additionalColors = {
@@ -30,7 +30,7 @@ export const lightColors = {
   secondary80: '#9A6AFF80',
   background: '#08060B',
   backgroundDisabled: '#3c3742',
-  backgroundAlt: '#27262c',  
+  backgroundAlt: '#4b3557',
   backgroundAlt2: 'rgba(39, 38, 44, 0.7)',
   cardBorder: '#383241',
   contrast: '#FFFFFF',
@@ -46,7 +46,7 @@ export const lightColors = {
   textDisabled: '#666171',
   textSubtle: '#B8ADD2',
   disabled: '#524B63',
-  gradientBubblegum: '#535e76',//'linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)',
+  gradientBubblegum: 'linear-gradient(to right,rgb(248,226,160) 0%,rgb(247,205,167) 21.67%,rgb(247,207,166) 39.41%,rgb(246,192,171) 53.69%,rgb(245,178,175) 100%)',//'linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)',
   gradientInverseBubblegum: 'linear-gradient(139.73deg, #3D2A54 0%, #313D5C 100%)',
   gradientCardHeader: 'linear-gradient(166.77deg, #3B4155 0%, #3A3045 100%)',
   gradientBlue: 'linear-gradient(180deg, #00707F 0%, #19778C 100%)',
@@ -60,7 +60,7 @@ export const lightColors = {
   // secondary80: '#7645D980',
   // background: '#FAF9FA',
   // backgroundDisabled: '#E9EAEB',
-  // backgroundAlt: '#FFFFFF',
+  // backgroundAlt: '#27262c',
   // backgroundAlt2: '#47255a',//rgba(255, 255, 255, 0.7)
   // cardBorder: '#E7E3EB',
   // contrast: '#191326',
@@ -75,7 +75,7 @@ export const lightColors = {
   // textDisabled: '#BDC2C4',
   // textSubtle: '#7A6EAA',
   // disabled: '#E9EAEB',
-  // gradientBubblegum: '#535e76',//'linear-gradient(139.73deg, #E5FDFF 0%, #F3EFFF 100%)',
+  // gradientBubblegum: 'linear-gradient(to right,rgb(248,226,160) 0%,rgb(247,205,167) 21.67%,rgb(247,207,166) 39.41%,rgb(246,192,171) 53.69%,rgb(245,178,175) 100%)',//'#535e76',//'linear-gradient(139.73deg, #E5FDFF 0%, #F3EFFF 100%)',
   // gradientInverseBubblegum: 'linear-gradient(139.73deg, #F3EFFF 0%, #E5FDFF 100%)',
   // gradientCardHeader: 'linear-gradient(111.68deg, #F2ECF2 0%, #E8F2F6 100%)',
   // gradientBlue: 'linear-gradient(180deg, #A7E8F1 0%, #94E1F2 100%)',
@@ -83,6 +83,7 @@ export const lightColors = {
   // gradientVioletAlt: 'linear-gradient(180deg, #CBD7EF 0%, #9A9FD0 100%)',
   // gradientGold: 'linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)',
   // gradientBold: 'linear-gradient(#53DEE9, #7645D9)',
+  
 }
 
 export const darkColors = {
@@ -108,7 +109,7 @@ export const darkColors = {
   textDisabled: '#666171',
   textSubtle: '#B8ADD2',
   disabled: '#524B63',
-  gradientBubblegum: 'linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)',
+  gradientBubblegum: 'linear-gradient(to right,#e4a0f8 0%,#cfa7f7 21.67%,#c5a6f7 39.41%,#abaef6 53.69%,#afd7f5 100%)',//'linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)',
   gradientInverseBubblegum: 'linear-gradient(139.73deg, #3D2A54 0%, #313D5C 100%)',
   gradientCardHeader: 'linear-gradient(166.77deg, #3B4155 0%, #3A3045 100%)',
   gradientBlue: 'linear-gradient(180deg, #00707F 0%, #19778C 100%)',

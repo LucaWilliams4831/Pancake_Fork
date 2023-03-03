@@ -1,6 +1,6 @@
 import { useTranslation } from '@pancakeswap/localization'
 import { Currency } from '@pancakeswap/sdk'
-import { BottomDrawer, Flex, Modal, ModalV2, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { BottomDrawer, Flex, Modal, ModalV2, SubMenuItems, useMatchBreakpoints } from '@pancakeswap/uikit'
 import replaceBrowserHistory from '@pancakeswap/utils/replaceBrowserHistory'
 import { AppBody } from 'components/App'
 import { useCallback, useContext } from 'react'
@@ -62,10 +62,12 @@ export default function Swap() {
   )
 
   return (
-    
-    <Page removePadding={isChartExpanded} hideFooterOnDesktop={isChartExpanded}>
+<Page removePadding={isChartExpanded} hideFooterOnDesktop={isChartExpanded}>
+
       <Flex width={['328px', '100%']} height="100%" justifyContent="center" position="relative" alignItems="flex-start">
-        {isDesktop && isChartSupported && (
+        
+
+        {/* {isDesktop && isChartSupported && (
           <PriceChartContainer
             inputCurrencyId={inputCurrencyId}
             inputCurrency={currencies[Field.INPUT]}
@@ -96,7 +98,7 @@ export default function Swap() {
             isOpen={isChartDisplayed}
             setIsOpen={setIsChartDisplayed}
           />
-        )}
+        )} */}
         {isDesktop && isSwapHotTokenDisplay && <HotTokenList handleOutputSelect={handleOutputSelect} />}
         <ModalV2 isOpen={!isDesktop && isSwapHotTokenDisplay} onDismiss={() => setIsSwapHotTokenDisplay(false)}>
           <Modal
@@ -115,6 +117,7 @@ export default function Swap() {
         </ModalV2>
         <Flex flexDirection="column">
           <StyledSwapContainer $isChartExpanded={isChartExpanded}>
+
             <StyledInputCurrencyWrapper mt={isChartExpanded ? '24px' : '0'}>
               <AppBody>
                 <QueryClientProvider client={queryClient}>
@@ -124,7 +127,9 @@ export default function Swap() {
             </StyledInputCurrencyWrapper>
           </StyledSwapContainer>
         </Flex>
+
       </Flex>
     </Page>
+    
   )
 }

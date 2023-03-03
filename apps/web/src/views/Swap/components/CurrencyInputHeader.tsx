@@ -61,10 +61,10 @@ const ColoredIconButton = styled(IconButton)`
       background: -webkit-linear-gradient(
         left,
         ${({ theme }) =>
-          theme.isDark
-            ? `rgba(39,38,44, 0) 0%,
+    theme.isDark
+      ? `rgba(39,38,44, 0) 0%,
         rgba(39,38,44, 0) 100%`
-            : `rgba(255, 255, 255, 0) 0%,
+      : `rgba(255, 255, 255, 0) 0%,
         rgba(255, 255, 255, 0.8) 50%,
         rgba(128, 186, 232, 0) 99%,
         rgba(125, 185, 232, 0) 100%`}
@@ -137,15 +137,19 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
 
   const titleContent = (
     <Flex width="100%" alignItems="center" justifyContent="space-between" flexDirection="column">
-      <Flex flexDirection="column" alignItems="flex-start" width="100%" marginBottom={15}>
+      <Flex flexDirection="row" alignItems="flex-start" width="100%" marginBottom={18}>
         <Swap.CurrencyInputHeaderTitle>{title}</Swap.CurrencyInputHeaderTitle>
-      </Flex>
-      {/* <Flex justifyContent="start" width="100%" height="17px" alignItems="center" mb="14px">
+        <Flex width="100%" justifyContent="right">
+          <NotificationDot show={expertMode}>
+            <GlobalSettings color="textSubtle" mr="0" mode={SettingsMode.SWAP_LIQUIDITY} />
+          </NotificationDot>
+
+          {/* <Flex justifyContent="start" width="100%" height="17px" alignItems="center" mb="14px">
         <Swap.CurrencyInputHeaderSubTitle>{subtitle}</Swap.CurrencyInputHeaderSubTitle>
       </Flex> */}
-      <Flex width="100%" justifyContent="end">
-        <>
-          {/* <ColoredIconButton className="is-shining" variant="text" scale="sm">
+
+          <>
+            {/* <ColoredIconButton className="is-shining" variant="text" scale="sm">
             <TooltipText
               ref={campaignTargetRef}
               display="flex"
@@ -165,23 +169,23 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
             </TooltipText>
           </ColoredIconButton>
           {campaignTooltipVisible && campaignTooltip} */}
-        </>
+          </>
 
-        {isChartSupported && setIsChartDisplayed && (
-          <ColoredIconButton
-            onClick={() => {
-              if (!isChartDisplayed && isSwapHotTokenDisplay) {
-                setIsSwapHotTokenDisplay(false)
-              }
-              toggleChartDisplayed()
-            }}
-            variant="text"
-            scale="sm"
-          >
-            {isChartDisplayed ? <ChartDisableIcon color="textSubtle" /> : <ChartIcon width="24px" color="textSubtle" />}
-          </ColoredIconButton>
-        )}
-        {/* <ColoredIconButton
+          {/* {isChartSupported && setIsChartDisplayed && (
+            <ColoredIconButton
+              onClick={() => {
+                if (!isChartDisplayed && isSwapHotTokenDisplay) {
+                  setIsSwapHotTokenDisplay(false)
+                }
+                toggleChartDisplayed()
+              }}
+              variant="text"
+              scale="sm"
+            >
+              {isChartDisplayed ? <ChartDisableIcon color="textSubtle" /> : <ChartIcon width="24px" color="textSubtle" />}
+            </ColoredIconButton>
+          )} */}
+          {/* <ColoredIconButton
           variant="text"
           scale="sm"
           onClick={() => {
@@ -207,15 +211,16 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
             </>
           )}
         </ColoredIconButton> */}
-        <NotificationDot show={expertMode}>
-          <GlobalSettings color="textSubtle" mr="0" mode={SettingsMode.SWAP_LIQUIDITY} />
-        </NotificationDot>
-        {/* <IconButton onClick={onPresentTransactionsModal} variant="text" scale="sm">
+          {/* <NotificationDot show={expertMode}>
+            <GlobalSettings color="textSubtle" mr="0" mode={SettingsMode.SWAP_LIQUIDITY} />
+          </NotificationDot> */}
+          {/* <IconButton onClick={onPresentTransactionsModal} variant="text" scale="sm">
           <HistoryIcon color="textSubtle" width="24px" />
         </IconButton>
         <IconButton variant="text" scale="sm" onClick={handleOnClick}>
           <RefreshIcon disabled={!hasAmount} color="textSubtle" width="27px" />
         </IconButton> */}
+        </Flex>
       </Flex>
     </Flex>
   )

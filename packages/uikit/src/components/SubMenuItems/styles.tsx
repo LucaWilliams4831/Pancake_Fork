@@ -12,7 +12,7 @@ export const SubMenuItemWrapper = styled(Flex)<{ $isMobileOnly: boolean }>`
 const StyledSubMenuItems = styled(Flex)`
   position: relative;
   z-index: 1;
-  width: 100%;
+  width: auto;
   display: block;
   white-space: nowrap;
   scroll-behavior: smooth;
@@ -21,7 +21,7 @@ const StyledSubMenuItems = styled(Flex)`
     display: flex;
   }
   flex-grow: 1;
-  background-color: ${({ theme }) => `${theme.colors.backgroundAlt2}`};
+  background-color: ${({ theme }) => `${theme.colors.backgroundAlt}`};
   box-shadow: inset 0px -2px 0px -8px rgba(133, 133, 133, 0.1);
   overflow-x: scroll;
   scrollbar-width: none;
@@ -30,6 +30,8 @@ const StyledSubMenuItems = styled(Flex)`
     display: none;
   }
 `;
+
+
 
 const maskSharedStyle = css`
   position: absolute;
