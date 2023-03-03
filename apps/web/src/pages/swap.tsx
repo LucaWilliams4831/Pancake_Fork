@@ -2,6 +2,7 @@ import { CHAIN_IDS } from 'utils/wagmi'
 import styled from "styled-components";
 import Swap from '../views/Swap'
 import { SwapFeaturesProvider } from '../views/Swap/SwapFeaturesContext'
+import { useMatchBreakpoints } from '@pancakeswap/uikit'
 
 const Image = styled.img`
   position: absolute;
@@ -10,105 +11,114 @@ const Image = styled.img`
 `
 
 const SwapPage = () => {
+  const { isDesktop } = useMatchBreakpoints()
+
   return (
     <SwapFeaturesProvider>
-      <Image alt=''
-        src='./images/bg2.png' />
+      {isDesktop && (
+        <Image alt=''
+          src='./images/bg2.png' />
+      )}
+
 
       <Swap />
-      <div style={{
-        width: '15vw',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        position: 'absolute',
-        justifyContent: 'center',
-        top: '20%',
-      }}>
+      {isDesktop && (
         <div style={{
-          border: '1px solid gray',
-          borderRadius: '25px',
-          width: '80%',
-          margin: '15px',
-          background: '#4b3557',
+          width: '15vw',
           display: 'flex',
           flexDirection: 'column',
-
+          alignItems: 'center',
+          position: 'absolute',
+          justifyContent: 'center',
+          top: '20%',
         }}>
           <div style={{
-            width: '100%',
-            height: '42px',
-            margin: '10px 0',
+            border: '1px solid gray',
+            borderRadius: '25px',
+            width: '80%',
+            margin: '15px',
+            background: '#4b3557',
             display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#F4EEFF',
+            flexDirection: 'column',
+
           }}>
-            
-            <a href="/swap">Swap</a>
+            <div style={{
+              width: '100%',
+              height: '42px',
+              margin: '10px 0',
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#F4EEFF',
+            }}>
+
+              <a href="/swap">Swap</a>
+            </div>
+
+            <div style={{
+              width: '100%',
+              height: '42px',
+              margin: '10px 0',
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#F4EEFF',
+            }}>
+              {/* <img/> */}
+              <a href="/limit">Limit</a>
+            </div>
+
+            <div style={{
+              width: '100%',
+              height: '42px',
+              margin: '10px 0',
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#F4EEFF',
+            }}>
+              {/* <img/> */}
+              <a href="/liquidity">Liquidity</a>
+            </div>
+
+            <div style={{
+              width: '100%',
+              height: '42px',
+              margin: '10px 0',
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#F4EEFF',
+            }}>
+              {/* <img/> */}
+              <a href="/farms">Farms</a>
+            </div>
+
+            <div style={{
+              width: '100%',
+              height: '42px',
+              margin: '10px 0',
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#F4EEFF',
+            }}>
+              {/* <img/> */}
+              <a href="/pools">Pools</a>
+            </div>
+
+
+
           </div>
-
-          <div style={{
-            width: '100%',
-            height: '42px',
-            margin: '10px 0',
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#F4EEFF',
-          }}>
-            {/* <img/> */}
-            <a href="/limit">Limit</a>
-          </div>
-
-          <div style={{
-            width: '100%',
-            height: '42px',
-            margin: '10px 0',
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#F4EEFF',
-          }}>
-            {/* <img/> */}
-            <a href="/liquidity">Liquidity</a>
-          </div>
-
-          <div style={{
-            width: '100%',
-            height: '42px',
-            margin: '10px 0',
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#F4EEFF',
-          }}>
-            {/* <img/> */}
-            <a href="/farms">Farms</a>
-          </div>
-
-          <div style={{
-            width: '100%',
-            height: '42px',
-            margin: '10px 0',
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#F4EEFF',
-          }}>
-            {/* <img/> */}
-            <a href="/pools">Pools</a>
-          </div>
-
-
-
         </div>
-      </div>
+      )
+      }
+
 
     </SwapFeaturesProvider>
   )
