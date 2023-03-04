@@ -11,7 +11,6 @@ import Footer from "../../components/Footer";
 import LangSelector from "../../components/LangSelector/LangSelector";
 import MenuItems from "../../components/MenuItems/MenuItems";
 import { SubMenuItems } from "../../components/SubMenuItems";
-import { SubMenuBoxItems } from "../../components/SubMenuItems/SubMenuItems";
 import { useMatchBreakpoints } from "../../contexts";
 import Logo from "./components/Logo";
 import { MENU_HEIGHT, MOBILE_MENU_HEIGHT, TOP_BANNER_HEIGHT, TOP_BANNER_HEIGHT_MOBILE } from "./config";
@@ -68,6 +67,7 @@ const Inner = styled.div`
   transform: translate3d(0, 0, 0);
   max-width: 100%;
   display:flex;
+  flex-direction:column;
 `;
 
 const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
@@ -173,11 +173,11 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
 
           {subLinks ? (
             <Flex flexDirection="column">
-              {/* <SubMenuItems
+              <SubMenuItems
                 items={subLinksWithoutMobile}
                 mt={`${totalTopMenuHeight + 1}px`}
                 activeItem={activeSubItem}
-              /> */}
+              />
 
               {subLinksMobileOnly && subLinksMobileOnly?.length > 0 && (
                 <SubMenuItems
@@ -192,7 +192,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
             <div />
           )}
 
-          <BodyWrapper mt={`${totalTopMenuHeight + 1}px`}>
+          <BodyWrapper mt={!subLinks ?`${totalTopMenuHeight + 1}px`:'0'}>
             <Inner>{children}</Inner>
           </BodyWrapper>
         </Wrapper>

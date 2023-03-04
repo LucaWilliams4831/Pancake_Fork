@@ -67,7 +67,7 @@ const SwapPage = () => {
               color: '#F4EEFF',
             }}>
               {/* <img/> */}
-              <a href="/limit">Limit</a>
+              <a href="/limit-orders">Limit</a>
             </div>
 
             <div style={{
