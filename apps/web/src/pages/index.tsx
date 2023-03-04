@@ -1,5 +1,4 @@
 import { formatEther } from '@ethersproject/units'
-import { Swap } from '@pancakeswap/uikit'
 import { getUnixTime, sub } from 'date-fns'
 import { gql } from 'graphql-request'
 import { GetStaticProps } from 'next'
@@ -12,18 +11,18 @@ import SwapPage from './swap'
 
 const IndexPage = ({ totalTx30Days, addressCount30Days, tvl }) => {
   return (
-    <SWRConfig
-      value={{
-        fallback: {
-          totalTx30Days,
-          addressCount30Days,
-          tvl,
-        },
-      }}
-    >      
-      <SwapPage />
-      
-    </SWRConfig>
+      <SWRConfig
+        value={{
+          fallback: {
+            totalTx30Days,
+            addressCount30Days,
+            tvl,
+          },
+        }}
+      >
+        {/* <Home /> */}
+        <SwapPage />
+      </SWRConfig>
   )
 }
 

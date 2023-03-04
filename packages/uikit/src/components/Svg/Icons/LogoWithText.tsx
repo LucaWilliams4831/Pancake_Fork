@@ -5,12 +5,11 @@ import { SvgProps } from "../types";
 
 const Logo: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
   return (
-    <></>
-    // <img style={{
-    //   width: '100px',
-    // }}
-    //   alt=''
-    //   src='./images/nav-title-light.png' />
+    <img style={{
+      width: '100px',
+    }}
+      alt=''
+      src='./images/nav-title-light.png' />
     // <Svg viewBox="0 0 1281 199" {...props}>
     //   <path
     //     fill={vars.colors.contrast}

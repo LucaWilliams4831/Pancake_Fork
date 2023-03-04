@@ -497,11 +497,11 @@ const LimitOrders = () => {
               <LimitOrderTable isCompact />
             </Flex>
           )}
-          {isSideFooter && (
+          {/* {isSideFooter && (
             <Box display={['none', null, null, 'block']} width="100%" height="100%">
               <SwapUI.Footer variant="side" helpUrl={LIMIT_ORDERS_DOCS_URL} />
             </Box>
-          )}
+          )} */}
         </Flex>
       </Flex>
       {/* Fixed position, doesn't take normal DOM space */}

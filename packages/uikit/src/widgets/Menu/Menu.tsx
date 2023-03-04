@@ -66,8 +66,6 @@ const Inner = styled.div`
   transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate3d(0, 0, 0);
   max-width: 100%;
-  display:flex;
-  flex-direction:column;
 `;
 
 const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
@@ -96,7 +94,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
 
   const topBannerHeight = isMobile ? TOP_BANNER_HEIGHT_MOBILE : TOP_BANNER_HEIGHT;
 
-  const totalTopMenuHeight = isMounted && banner ? MENU_HEIGHT : MENU_HEIGHT;
+  const totalTopMenuHeight = isMounted && banner ? MENU_HEIGHT + topBannerHeight : MENU_HEIGHT;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -144,7 +142,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
       >
         <Wrapper>
           <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}>
-            {/* {banner && isMounted && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>} */}
+            {banner && isMounted && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>}
             <StyledNav>
               <Flex>
                 <Logo href={homeLink?.href ?? "/"} />
@@ -170,9 +168,8 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
               </Flex>
             </StyledNav>
           </FixedContainer>
-
           {subLinks ? (
-            <Flex flexDirection="column">
+            <Flex justifyContent="space-around" overflow="hidden">
               <SubMenuItems
                 items={subLinksWithoutMobile}
                 mt={`${totalTopMenuHeight + 1}px`}
@@ -191,8 +188,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
           ) : (
             <div />
           )}
-
-          <BodyWrapper mt={!subLinks ?`${totalTopMenuHeight + 1}px`:'0'}>
+          <BodyWrapper mt={!subLinks ? `${totalTopMenuHeight + 1}px` : "0"}>
             <Inner>{children}</Inner>
           </BodyWrapper>
         </Wrapper>

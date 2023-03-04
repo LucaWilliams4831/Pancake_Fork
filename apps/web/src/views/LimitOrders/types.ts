@@ -2,7 +2,7 @@ import { Order } from '@gelatonetwork/limit-orders-lib'
 
 export enum ORDER_CATEGORY {
   Open = 0,
-  // Expired = 1,
+  Expired = 2,
   History = 1,
 }
 

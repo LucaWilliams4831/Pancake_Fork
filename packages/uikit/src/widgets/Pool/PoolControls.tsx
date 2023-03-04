@@ -187,7 +187,7 @@ export function PoolControls<T>({
           hideViewMode={hideViewMode}
         />
         <FilterContainer>
-          <LabelWrapper>
+          {/* <LabelWrapper>
             <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase">
               {t("Sort by")}
             </Text>
@@ -218,7 +218,7 @@ export function PoolControls<T>({
                 onOptionChange={handleSortOptionChange}
               />
             </ControlStretch>
-          </LabelWrapper>
+          </LabelWrapper> */}
           <LabelWrapper style={{ marginLeft: 16 }}>
             <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase">
               {t("Search")}

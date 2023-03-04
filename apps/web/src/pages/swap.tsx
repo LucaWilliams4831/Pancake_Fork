@@ -1,28 +1,27 @@
+import styled from 'styled-components'
 import { CHAIN_IDS } from 'utils/wagmi'
-import styled from "styled-components";
 import Swap from '../views/Swap'
 import { SwapFeaturesProvider } from '../views/Swap/SwapFeaturesContext'
-import { useMatchBreakpoints } from '@pancakeswap/uikit'
 
-const Image = styled.img`
-  position: absolute;
-  width: 100%;
-  height: 100%;
+const MobileView = styled.div`
+  @media (max-width: 767px) {
+    & {
+      display: none;
+    }
+  }
 `
-
 const SwapPage = () => {
-  const { isDesktop } = useMatchBreakpoints()
 
   return (
-    <SwapFeaturesProvider>
-      {isDesktop && (
-        <Image alt=''
+    <>
+    <MobileView>
+        <img style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+        }}
+          alt=''
           src='./images/bg2.png' />
-      )}
-
-
-      <Swap />
-      {isDesktop && (
         <div style={{
           width: '15vw',
           display: 'flex',
@@ -31,6 +30,7 @@ const SwapPage = () => {
           position: 'absolute',
           justifyContent: 'center',
           top: '20%',
+          zIndex: '999',
         }}>
           <div style={{
             border: '1px solid gray',
@@ -111,16 +111,16 @@ const SwapPage = () => {
               {/* <img/> */}
               <a href="/pools">Pools</a>
             </div>
-
-
-
           </div>
         </div>
-      )
-      }
+      </MobileView>
 
+      <SwapFeaturesProvider>
+        <Swap />
+      </SwapFeaturesProvider>
+      
 
-    </SwapFeaturesProvider>
+    </>
   )
 }
 

@@ -12,7 +12,6 @@ export const baseColors = {
   warning: '#FFB237',
   warning2D: '#ED4B9E2D',
   warning33: '#ED4B9E33',
-  backgroundSubMenu: '#4b3557',
 }
 
 export const additionalColors = {
@@ -31,7 +30,7 @@ export const lightColors = {
   background: '#08060B',
   backgroundDisabled: '#3c3742',
   backgroundAlt: '#4b3557',
-  backgroundAlt2: 'rgba(39, 38, 44, 0.7)',
+  backgroundAlt2: '#47255a',//'rgba(39, 38, 44, 0.7)',
   cardBorder: '#383241',
   contrast: '#FFFFFF',
   dropdown: '#1E1D20',

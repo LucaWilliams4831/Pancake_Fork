@@ -202,7 +202,7 @@ const useExpiredOrders = (turnOn: boolean): Order[] => {
 export default function useGelatoLimitOrdersHistory(orderCategory: ORDER_CATEGORY) {
   const historyOrders = useHistoryOrders(orderCategory === ORDER_CATEGORY.History)
   const openOrders = useOpenOrders(orderCategory === ORDER_CATEGORY.Open)
-  // const expiredOrders = useExpiredOrders(orderCategory === ORDER_CATEGORY.Expired)
+  const expiredOrders = useExpiredOrders(orderCategory === ORDER_CATEGORY.Expired)
 
   const orders = useMemo(() => {
     switch (orderCategory as ORDER_CATEGORY) {
@@ -210,12 +210,12 @@ export default function useGelatoLimitOrdersHistory(orderCategory: ORDER_CATEGOR
         return openOrders
       case ORDER_CATEGORY.History:
         return historyOrders
-      // case ORDER_CATEGORY.Expired:
-      //   return expiredOrders
+      case ORDER_CATEGORY.Expired:
+        return expiredOrders
       default:
         return []
     }
-  }, [orderCategory, openOrders, historyOrders])
+  }, [orderCategory, openOrders, historyOrders, expiredOrders])
 
   return useMemo(
     () => (Array.isArray(orders) ? orderBy(orders, (order) => parseInt(order.createdAt), 'desc') : orders),

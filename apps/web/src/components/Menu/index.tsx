@@ -46,7 +46,7 @@ const Menu = (props) => {
             <UserMenu />
           </>
         }
-        banner={showPhishingWarningBanner && typeof window !== 'undefined' && <PhishingWarningBanner />}
+        banner={showPhishingWarningBanner && typeof window !== 'undefined' }
         isDark={isDark}
         toggleTheme={toggleTheme}
         currentLang={currentLanguage.code}

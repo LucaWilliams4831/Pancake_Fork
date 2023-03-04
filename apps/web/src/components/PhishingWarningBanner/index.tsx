@@ -52,7 +52,7 @@ const PhishingWarningBanner: React.FC<React.PropsWithChildren> = () => {
   }, [t])
   const warningTextComponent = (
     <>
-      {/* <Text as="span" color="warning" small bold textTransform="uppercase">
+      <Text as="span" color="warning" small bold textTransform="uppercase">
         {t('Phishing warning: ')}
       </Text>
       {warningTextAsParts.map((text, i) => (
@@ -66,7 +66,7 @@ const PhishingWarningBanner: React.FC<React.PropsWithChildren> = () => {
         >
           {text}
         </Text>
-      ))} */}
+      ))}
     </>
   )
   return (
@@ -81,7 +81,7 @@ const PhishingWarningBanner: React.FC<React.PropsWithChildren> = () => {
       ) : (
         <>
           <InnerContainer>
-            {/* <img
+            <img
               src="/images/decorations/phishing-warning-bunny.webp"
               alt="phishing-warning"
               width="92px"
@@ -92,8 +92,8 @@ const PhishingWarningBanner: React.FC<React.PropsWithChildren> = () => {
                   e.currentTarget.src = fallbackSrc
                 }
               }}
-            /> */}
-            {/* <SpeechBubble>{warningTextComponent}</SpeechBubble> */}
+            />
+            <SpeechBubble>{warningTextComponent}</SpeechBubble>
           </InnerContainer>
           <IconButton onClick={hideBanner} variant="text">
             <CloseIcon color="#FFFFFF" />

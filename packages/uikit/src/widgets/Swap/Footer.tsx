@@ -58,7 +58,7 @@ const Footer: React.FC<
     <Wrapper $isSide={isSide}>
       {externalText && externalLinkUrl && (
         <Flex flexDirection={isSide ? "column" : ["column", "column", "row"]} alignItems="center">
-          {/* <LinkExternal
+          <LinkExternal
             id="ercBridge"
             href={externalLinkUrl}
             ml={[0, 0, "40px"]}
@@ -66,7 +66,7 @@ const Footer: React.FC<
             mb={["8px", "8px", 0]}
           >
             {externalText}
-          </LinkExternal> */}
+          </LinkExternal>
         </Flex>
       )}
       {isSide && <Flex flexGrow={1} />}
@@ -77,7 +77,7 @@ const Footer: React.FC<
           width={["100%", "100%", "100%", isSide ? "100%" : "auto"]}
           justifyContent={["center", "center", "center", "flex-end"]}
         >
-          {/* <BubbleWrapper>
+          <BubbleWrapper>
             <Button id="clickExchangeHelp" as="a" external href={helpUrl} variant="subtle">
               {t("Need help ?")}
             </Button>
@@ -85,7 +85,7 @@ const Footer: React.FC<
               <path d="M0 16V0C0 0 3 1 6 1C9 1 16 -2 16 3.5C16 10.5 7.5 16 0 16Z" />
             </Svg>
           </BubbleWrapper>
-          {helpImage} */}
+          {helpImage}
         </Flex>
       )}
     </Wrapper>

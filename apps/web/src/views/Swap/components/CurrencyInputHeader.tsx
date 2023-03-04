@@ -11,7 +11,6 @@ import {
   Swap,
   Text,
   TooltipText,
-  TrophyGoldIcon,
   useModal,
   useTooltip,
 } from '@pancakeswap/uikit'
@@ -85,22 +84,13 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
   const { t } = useTranslation()
   const [mobileTooltipShowOnce, setMobileTooltipShowOnce] = useAtom(mobileShowOnceTokenHighlightAtom)
   const [mobileTooltipShow, setMobileTooltipShow] = useState(false)
-  const [mobileCampaignTooltipShow, setMobileCampaignTooltipShow] = useState(false)
+
   const { tooltip, tooltipVisible, targetRef } = useTooltip(<Text>{t('Check out the top traded tokens')}</Text>, {
     placement: isMobile ? 'top' : 'bottom',
     trigger: isMobile ? 'focus' : 'hover',
     ...(isMobile && { manualVisible: mobileTooltipShow }),
   })
-  const {
-    tooltip: campaignTooltip,
-    tooltipVisible: campaignTooltipVisible,
-    targetRef: campaignTargetRef,
-  } = useTooltip(<Text>{t('Trade and Share $10,000')}</Text>, {
-    placement: 'top',
-    trigger: 'hover',
-    manualVisible: mobileCampaignTooltipShow,
-    avoidToStopPropagation: true,
-  })
+
   const { isChartSupported, isChartDisplayed, setIsChartDisplayed } = useContext(SwapFeaturesContext)
   const [expertMode] = useExpertModeManager()
   const toggleChartDisplayed = () => {
@@ -112,13 +102,6 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
 
   const mobileTooltipClickOutside = useCallback(() => {
     setMobileTooltipShow(false)
-    setMobileCampaignTooltipShow(false)
-  }, [])
-
-  useEffect(() => {
-    setTimeout(() => {
-      setMobileCampaignTooltipShow(true)
-    }, 100)
   }, [])
 
   useEffect(() => {
@@ -137,55 +120,33 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
 
   const titleContent = (
     <Flex width="100%" alignItems="center" justifyContent="space-between" flexDirection="column">
-      <Flex flexDirection="row" alignItems="flex-start" width="100%" marginBottom={18}>
+      <Flex flexDirection="row" alignItems="flex-start" width="100%" marginBottom={15}>
         <Swap.CurrencyInputHeaderTitle>{title}</Swap.CurrencyInputHeaderTitle>
+
         <Flex width="100%" justifyContent="right">
           <NotificationDot show={expertMode}>
             <GlobalSettings color="textSubtle" mr="0" mode={SettingsMode.SWAP_LIQUIDITY} />
           </NotificationDot>
-
-          {/* <Flex justifyContent="start" width="100%" height="17px" alignItems="center" mb="14px">
+        </Flex>
+        {/* <Flex justifyContent="start" width="100%" height="17px" alignItems="center" mb="14px">
         <Swap.CurrencyInputHeaderSubTitle>{subtitle}</Swap.CurrencyInputHeaderSubTitle>
-      </Flex> */}
+        </Flex> */}
 
-          <>
-            {/* <ColoredIconButton className="is-shining" variant="text" scale="sm">
-            <TooltipText
-              ref={campaignTargetRef}
-              display="flex"
-              onClick={() => setMobileCampaignTooltipShow(false)}
-              style={{ justifyContent: 'center' }}
-            >
-              <TrophyGoldIcon
-                onClick={() => {
-                  window.open(
-                    'https://medium.com/pancakeswap/introducing-market-maker-integration-on-ethereum-pancakeswap-trade-and-share-10-000-usdc-in-724df104716',
-                    '_blank',
-                    'noreferrer noopener',
-                  )
-                }}
-                width={27}
-              />
-            </TooltipText>
+        {/* {isChartSupported && setIsChartDisplayed && (
+          <ColoredIconButton
+            onClick={() => {
+              if (!isChartDisplayed && isSwapHotTokenDisplay) {
+                setIsSwapHotTokenDisplay(false)
+              }
+              toggleChartDisplayed()
+            }}
+            variant="text"
+            scale="sm"
+          >
+            {isChartDisplayed ? <ChartDisableIcon color="textSubtle" /> : <ChartIcon width="24px" color="textSubtle" />}
           </ColoredIconButton>
-          {campaignTooltipVisible && campaignTooltip} */}
-          </>
-
-          {/* {isChartSupported && setIsChartDisplayed && (
-            <ColoredIconButton
-              onClick={() => {
-                if (!isChartDisplayed && isSwapHotTokenDisplay) {
-                  setIsSwapHotTokenDisplay(false)
-                }
-                toggleChartDisplayed()
-              }}
-              variant="text"
-              scale="sm"
-            >
-              {isChartDisplayed ? <ChartDisableIcon color="textSubtle" /> : <ChartIcon width="24px" color="textSubtle" />}
-            </ColoredIconButton>
-          )} */}
-          {/* <ColoredIconButton
+        )}
+        <ColoredIconButton
           variant="text"
           scale="sm"
           onClick={() => {
@@ -211,16 +172,13 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
             </>
           )}
         </ColoredIconButton> */}
-          {/* <NotificationDot show={expertMode}>
-            <GlobalSettings color="textSubtle" mr="0" mode={SettingsMode.SWAP_LIQUIDITY} />
-          </NotificationDot> */}
-          {/* <IconButton onClick={onPresentTransactionsModal} variant="text" scale="sm">
+
+        {/* <IconButton onClick={onPresentTransactionsModal} variant="text" scale="sm">
           <HistoryIcon color="textSubtle" width="24px" />
         </IconButton>
         <IconButton variant="text" scale="sm" onClick={handleOnClick}>
           <RefreshIcon disabled={!hasAmount} color="textSubtle" width="27px" />
         </IconButton> */}
-        </Flex>
       </Flex>
     </Flex>
   )
