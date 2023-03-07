@@ -64,9 +64,15 @@ const Overview: React.FC<React.PropsWithChildren> = () => {
 
   return (
     <Page>
-      <Heading scale="lg" mb="16px" id="info-overview-title">
-        {t('PancakeSwap Info & Analytics')}
-      </Heading>
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}>
+        <Heading scale="lg" mb="16px" id="info-overview-title">
+          {t('Info & Analytics')}
+        </Heading>
+      </div>
       <ChartCardsContainer>
         <Card>
           <HoverableChart
@@ -101,7 +107,9 @@ const Overview: React.FC<React.PropsWithChildren> = () => {
         {t('Transactions')}
       </Heading>
       <TransactionTable transactions={transactions} />
+
     </Page>
+
   )
 }
 

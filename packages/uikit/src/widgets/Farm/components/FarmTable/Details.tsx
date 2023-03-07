@@ -27,10 +27,10 @@ const ArrowIcon = styled((props) => <ChevronDownIcon {...props} />)`
 const Details: React.FC<React.PropsWithChildren<DetailsProps>> = ({ actionPanelToggled }) => {
   const { t } = useTranslation();
   const { isDesktop } = useMatchBreakpoints();
-
+//&& t("Details")
   return (
     <Container>
-      {!isDesktop && t("Details")}
+      {!isDesktop } 
       <ArrowIcon color="primary" toggled={actionPanelToggled} />
     </Container>
   );

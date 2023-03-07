@@ -111,6 +111,9 @@ export default function Pool() {
 
   return (
     <Page>
+      <div style={{
+        width:'60%',
+      }}>
       <AppBody>
         <AppHeader title={t('Your Liquidity')} subtitle={t('Remove liquidity to receive tokens back')} />
         <Body>
@@ -136,6 +139,7 @@ export default function Pool() {
           </Link>
         </CardFooter>
       </AppBody>
+      </div>
     </Page>
   )
 }

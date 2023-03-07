@@ -20,11 +20,12 @@ export interface ITableProps {
 }
 
 const Container = styled.div`
-  width: 100%;
-  background: ${({ theme }) => theme.card.background};
+  // width: 100%;
+  // background: ${({ theme }) => theme.card.background};
+  background: #0e0b0c;
   border-radius: 16px;
-  margin: 16px 0px;
-  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  margin: 16px 20px;
+  // border: 1px solid ${({ theme }) => theme.colors.cardBorder};
 `
 
 const TableWrapper = styled.div`

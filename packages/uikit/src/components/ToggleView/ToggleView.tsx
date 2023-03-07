@@ -42,10 +42,10 @@ export const ToggleView: React.FunctionComponent<React.PropsWithChildren<ToggleV
   return (
     <Container>
       <IconButton variant="text" scale="sm" id={`${idPrefix}CardView`} onClick={handleToggleCard}>
-        <CardViewIcon color={viewMode === ViewMode.CARD ? "primary" : "textDisabled"} />
+        <CardViewIcon color={viewMode === ViewMode.CARD ? "text" : "textDisabled"} />
       </IconButton>
       <IconButton variant="text" scale="sm" id={`${idPrefix}TableView`} onClick={handleToggleTable}>
-        <ListViewIcon color={viewMode === ViewMode.TABLE ? "primary" : "textDisabled"} />
+        <ListViewIcon color={viewMode === ViewMode.TABLE ? "text" : "textDisabled"} />
       </IconButton>
     </Container>
   );

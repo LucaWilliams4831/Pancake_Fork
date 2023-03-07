@@ -290,7 +290,11 @@ export default function CurrencyInputPanel({
                     : currency?.symbol) || t('Select a currency')}
                 </Text>
               )}
+              <div style={{
+                marginRight:'20px',
+              }}>
               {!disableCurrencySelect && <ChevronDownIcon />}
+              </div>
             </Flex>
           </CurrencySelectButton>
           {token && tokenAddress ? (

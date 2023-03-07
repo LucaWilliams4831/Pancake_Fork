@@ -220,9 +220,9 @@ export function PoolControls<T>({
             </ControlStretch>
           </LabelWrapper> */}
           <LabelWrapper style={{ marginLeft: 16 }}>
-            <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase">
+            {/* <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase">
               {t("Search")}
-            </Text>
+            </Text> */}
             <SearchInput initialValue={searchQuery} onChange={handleChangeSearchQuery} placeholder="Search Pools" />
           </LabelWrapper>
         </FilterContainer>

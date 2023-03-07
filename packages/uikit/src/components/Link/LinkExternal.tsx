@@ -12,11 +12,12 @@ const LinkExternal: React.FC<React.PropsWithChildren<LinkProps>> = ({
   ...props
 }) => {
   return (
+    // props.color ? props.color : "primary"
     <Link external {...props}>
       {children}
-      {isBscScan && <BscScanIcon color={props.color ? props.color : "primary"} ml="4px" />}
-      {isAptosScan && <AptosIcon width="18" height="18" color={props.color ? props.color : "primary"} ml="4px" />}
-      {!isBscScan && !isAptosScan && <OpenNewIcon color={props.color ? props.color : "primary"} ml="4px" />}
+      {isBscScan && <BscScanIcon color={"#fff"} ml="4px" />}
+      {isAptosScan && <AptosIcon width="18" height="18" color={"#fff"} ml="4px" />}
+      {!isBscScan && !isAptosScan && <OpenNewIcon color={"#fff"} ml="4px" />}
     </Link>
   );
 };

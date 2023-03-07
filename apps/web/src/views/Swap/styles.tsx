@@ -22,5 +22,5 @@ export const StyledInputCurrencyWrapper = styled(Box)`
         width: 328px;
       }
     }
-  width: 700px;
+  width: 350px;
 `

@@ -41,18 +41,18 @@ export const MobileColumnSchema: ColumnsDefTypes[] = [
     name: "farm",
     sortable: true,
     label: "",
-  },
-  {
-    id: 2,
-    name: "earned",
-    sortable: true,
-    label: "Earned",
-  },
+  },  
   {
     id: 3,
     name: "apr",
     sortable: true,
     label: "APR",
+  },
+  {
+    id: 2,
+    name: "earned",
+    sortable: true,
+    label: "EARNED",
   },
   {
     id: 6,
@@ -74,13 +74,7 @@ export const DesktopColumnSchema: ColumnsDefTypes[] = [
     name: "type",
     sortable: false,
     label: "",
-  },
-  {
-    id: 3,
-    name: "earned",
-    sortable: true,
-    label: "Earned",
-  },
+  },  
   {
     id: 4,
     name: "apr",
@@ -91,7 +85,13 @@ export const DesktopColumnSchema: ColumnsDefTypes[] = [
     id: 5,
     name: "liquidity",
     sortable: true,
-    label: "Liquidity",
+    label: "LIQUIDITY",
+  },
+  {
+    id: 3,
+    name: "earned",
+    sortable: true,
+    label: "YOUR EARNINGS",
   },
   {
     id: 6,

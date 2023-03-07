@@ -124,15 +124,7 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
         <Swap.CurrencyInputHeaderTitle>{title}</Swap.CurrencyInputHeaderTitle>
 
         <Flex width="100%" justifyContent="right">
-          <NotificationDot show={expertMode}>
-            <GlobalSettings color="textSubtle" mr="0" mode={SettingsMode.SWAP_LIQUIDITY} />
-          </NotificationDot>
-        </Flex>
-        {/* <Flex justifyContent="start" width="100%" height="17px" alignItems="center" mb="14px">
-        <Swap.CurrencyInputHeaderSubTitle>{subtitle}</Swap.CurrencyInputHeaderSubTitle>
-        </Flex> */}
-
-        {/* {isChartSupported && setIsChartDisplayed && (
+        {isChartSupported && setIsChartDisplayed && (
           <ColoredIconButton
             onClick={() => {
               if (!isChartDisplayed && isSwapHotTokenDisplay) {
@@ -146,6 +138,15 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
             {isChartDisplayed ? <ChartDisableIcon color="textSubtle" /> : <ChartIcon width="24px" color="textSubtle" />}
           </ColoredIconButton>
         )}
+          <NotificationDot show={expertMode}>
+            <GlobalSettings color="textSubtle" mr="0" mode={SettingsMode.SWAP_LIQUIDITY} />
+          </NotificationDot>
+        </Flex>
+        {/* <Flex justifyContent="start" width="100%" height="17px" alignItems="center" mb="14px">
+        <Swap.CurrencyInputHeaderSubTitle>{subtitle}</Swap.CurrencyInputHeaderSubTitle>
+        </Flex> */}
+
+        {/* 
         <ColoredIconButton
           variant="text"
           scale="sm"

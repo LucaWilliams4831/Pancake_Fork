@@ -29,7 +29,7 @@ import getTimePeriods from '@pancakeswap/utils/getTimePeriods'
 import { CHAINS_STARGATE } from './stargate/config'
 import { findChainByStargateId } from './stargate/network'
 
-const StyledMenuItem = styled('div')<{ $isActive?: boolean }>`
+const StyledMenuItem = styled('div') <{ $isActive?: boolean }>`
   position: relative;
   display: flex;
   align-items: center;
@@ -264,9 +264,8 @@ function RecentTransactionsModal({
             key={i}
             href={
               txn.confirmation
-                ? `${findChainByStargateId(txn.confirmation.chainId)?.chain.blockExplorers?.default.url}/tx/${
-                    txn.confirmation.hash
-                  }`
+                ? `${findChainByStargateId(txn.confirmation.chainId)?.chain.blockExplorers?.default.url}/tx/${txn.confirmation.hash
+                }`
                 : `${txnChain?.chain.blockExplorers?.default.url}/tx/${txn.hash}`
             }
             external
@@ -432,8 +431,12 @@ function User() {
 
   return (
     <Button scale="sm" onClick={() => window.stargate.ui.connectWalletPopup.open()}>
+      <div style={{
+        background: 'linear-gradient(180deg, #1f111b 0%, #200e13 100%)',
+      }}>
       <Box display={['none', null, null, 'block']}>Connect Wallet</Box>
       <Box display={['block', null, null, 'none']}>Connect</Box>
-    </Button>
+    </div>
+    </Button >
   )
 }

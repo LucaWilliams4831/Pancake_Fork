@@ -97,8 +97,11 @@ const PoolTabButtons = ({
   return (
     <ViewControls>
       {viewModeToggle}
+      <Text fontSize="16px" bold color="text" >
+        {t("Stake SFY and earn other tokens")}
+      </Text>
       {/* {stakedOnlySwitch} */}
-      {liveOrFinishedSwitch}
+      {/* {liveOrFinishedSwitch} */}
     </ViewControls>
   );
 };

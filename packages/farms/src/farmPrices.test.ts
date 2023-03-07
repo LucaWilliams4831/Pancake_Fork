@@ -9,7 +9,7 @@ describe('getFarmPrices tests', () => {
         token: {
           chainId: 56,
           address: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
-          symbol: 'Cake',
+          symbol: 'CAKE',
           name: 'PancakeSwap Token',
           decimals: 18,
         },

@@ -5,12 +5,14 @@ import { useTranslation } from "@pancakeswap/localization";
 import { Input } from "../Input";
 
 const StyledInput = styled(Input)`
-  border-radius: 16px;
+  border-radius: 10px;
   margin-left: auto;
+  background: #0a090a;
 `;
 
 const InputWrapper = styled.div`
   position: relative;
+  background: #0e0b0c;
   ${({ theme }) => theme.mediaQueries.sm} {
     display: block;
   }

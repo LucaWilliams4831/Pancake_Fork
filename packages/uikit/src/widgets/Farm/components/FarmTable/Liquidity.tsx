@@ -45,9 +45,9 @@ const Liquidity: React.FunctionComponent<React.PropsWithChildren<FarmTableLiquid
       <LiquidityWrapper>
         <Text>{displayLiquidity}</Text>
       </LiquidityWrapper>
-      <ReferenceElement ref={targetRef}>
+      {/* <ReferenceElement ref={targetRef}>
         <HelpIcon color="textSubtle" />
-      </ReferenceElement>
+      </ReferenceElement> */}
       {tooltipVisible && tooltip}
     </Container>
   );

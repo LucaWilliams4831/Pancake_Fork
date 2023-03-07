@@ -5,7 +5,10 @@ const StyledTable = styled.div`
   border-radius: ${({ theme }) => theme.radii.card};
   scroll-margin-top: 64px;
 
-  background-color: ${({ theme }) => theme.card.background};
+  // background-color: ${({ theme }) => theme.card.background};
+  background: #0e0b0c;
+  border-radius: 16px;
+  margin: 16px 20px;
   > div:not(:last-child) {
     border-bottom: 2px solid ${({ theme }) => theme.colors.disabled};
   }
@@ -18,7 +21,9 @@ const StyledTable = styled.div`
 
 const StyledTableBorder = styled.div`
   border-radius: ${({ theme }) => theme.radii.card};
-  background-color: ${({ theme }) => theme.colors.cardBorder};
+  // background-color: ${({ theme }) => theme.colors.cardBorder};
+  background-color: ${({ theme }) => theme.colors.gradientBubblegum};
+  border: 1px solid #181014;
   padding: 1px 1px 3px 1px;
   background-size: 400% 400%;
 `;

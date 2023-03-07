@@ -82,7 +82,7 @@ interface ActionPanelProps {
 const InfoSection = styled(Box)`
   flex-grow: 0;
   flex-shrink: 0;
-  flex-basis: auto;
+  flex-basis: auto;  
 
   padding: 8px 8px;
   ${({ theme }) => theme.mediaQueries.lg} {
@@ -90,6 +90,7 @@ const InfoSection = styled(Box)`
     flex-basis: 230px;
     ${Text} {
       font-size: 14px;
+      color: #fff;
     }
   }
 `
