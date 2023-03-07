@@ -5,7 +5,8 @@ import { SvgProps } from "../types";
 const Icon: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
   return (
     <img style={{
-      width: '40px',
+      width: '20px',
+      marginRight :'10px',
     }}
       alt=''
       src='./images/coin.png' />
