@@ -33,6 +33,8 @@ const Menu = (props) => {
     return footerLinks(t)
   }, [t])
 
+
+
   return (
     <>
       <UikitMenu
@@ -42,11 +44,26 @@ const Menu = (props) => {
         rightSide={
           <>
             {/* <NetworkSwitcher /> */}
-            <UserMenu />
+            <div style={{
+              height: '50px',
+              margin: '50px, 0px',
+            }}>
+              <UserMenu />
+            </div>
+            
+            {/* <div style={{
+              height: '50px',
+              background:'#170c13',
+              margin:'10px',
+              paddingTop:'10px',
+              paddingRight:'0px',
+              paddingLeft:'5px',
+            }}> */}
             <GlobalSettings mode={SettingsMode.GLOBAL} />
+            {/* </div> */}
           </>
         }
-        banner={showPhishingWarningBanner && typeof window !== 'undefined' }
+        banner={showPhishingWarningBanner && typeof window !== 'undefined'}
         isDark={isDark}
         toggleTheme={toggleTheme}
         currentLang={currentLanguage.code}

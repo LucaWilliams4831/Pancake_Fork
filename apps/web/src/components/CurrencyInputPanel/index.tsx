@@ -170,13 +170,13 @@ export default function CurrencyInputPanel({
     // <Box position="relative" id={id}>
     <div style={{
       width: '100%',
-      height: '70px',
+      height: '100px',
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
       color: '#F4EEFF',
-      backgroundColor: '#0e0b0c',
+      background: 'linear-gradient(90deg, #0d0a0c 0%, #0e0b0c 50%, #0b090b 100%)',
       borderRadius:'5px',
     }}>
       <InputPanel>

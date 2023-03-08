@@ -55,6 +55,7 @@ import { useDerivedSwapInfoWithStableSwap, useIsSmartRouterBetter, useTradeInfo 
 import { MMError } from '../MMLinkPools/apis'
 import { useDerivedSwapInfoWithMM } from '../MMLinkPools/hooks/useDerivedSwapInfoWithMM'
 
+
 export const SmartSwapForm: React.FC<{ handleOutputSelect: (newCurrencyOutput: Currency) => void }> = ({
   handleOutputSelect,
 }) => {
@@ -137,23 +138,23 @@ export const SmartSwapForm: React.FC<{ handleOutputSelect: (newCurrencyOutput: C
 
   const parsedAmounts = showWrap
     ? {
-        [Field.INPUT]: parsedAmount,
-        [Field.OUTPUT]: parsedAmount,
-      }
+      [Field.INPUT]: parsedAmount,
+      [Field.OUTPUT]: parsedAmount,
+    }
     : {
-        [Field.INPUT]:
-          independentField === Field.INPUT
-            ? parsedAmount
-            : isMMBetter
+      [Field.INPUT]:
+        independentField === Field.INPUT
+          ? parsedAmount
+          : isMMBetter
             ? mmTradeInfo.inputAmount
             : tradeInfo?.inputAmount,
-        [Field.OUTPUT]:
-          independentField === Field.OUTPUT
-            ? parsedAmount
-            : isMMBetter
+      [Field.OUTPUT]:
+        independentField === Field.OUTPUT
+          ? parsedAmount
+          : isMMBetter
             ? mmTradeInfo.outputAmount
             : tradeInfo?.outputAmount,
-      }
+    }
 
   const { onSwitchTokens, onCurrencySelection, onUserInput, onChangeRecipient } = useSwapActionHandlers()
 
@@ -309,21 +310,26 @@ export const SmartSwapForm: React.FC<{ handleOutputSelect: (newCurrencyOutput: C
           )} */}
 
           <AutoColumn justify="space-between">
-            <AutoRow justify={isExpertMode ? 'space-between' : 'center'} style={{ padding: '0' }}>
-              <SwapUI.SwitchButton
-                onClick={() => {
-                  setApprovalSubmitted(false) // reset 2 step UI for approvals
-                  onSwitchTokens()
-                  replaceBrowserHistory('inputCurrency', outputCurrencyId)
-                  replaceBrowserHistory('outputCurrency', inputCurrencyId)
-                }}
-              />
-              {allowRecipient && recipient === null ? (
-                <Button variant="text" id="add-recipient-button" onClick={() => onChangeRecipient('')}>
-                  {t('+ Add a send (optional)')}
-                </Button>
-              ) : null}
-            </AutoRow>
+            <div style={{
+              height: '5px',
+              marginTop: "-15px"
+            }}>
+              <AutoRow justify={isExpertMode ? 'space-between' : 'center'} style={{ padding: '0' }}>
+                <SwapUI.SwitchButton
+                  onClick={() => {
+                    setApprovalSubmitted(false) // reset 2 step UI for approvals
+                    onSwitchTokens()
+                    replaceBrowserHistory('inputCurrency', outputCurrencyId)
+                    replaceBrowserHistory('outputCurrency', inputCurrencyId)
+                  }}
+                />
+                {allowRecipient && recipient === null ? (
+                  <Button variant="text" id="add-recipient-button" onClick={() => onChangeRecipient('')}>
+                    {t('+ Add a send (optional)')}
+                  </Button>
+                ) : null}
+              </AutoRow>
+            </div>
           </AutoColumn>
           <CurrencyInputPanel
             value={formattedAmounts[Field.OUTPUT]}
@@ -403,11 +409,12 @@ export const SmartSwapForm: React.FC<{ handleOutputSelect: (newCurrencyOutput: C
           )} */}
         </AutoColumn>
 
-        <Box mt="0.25rem">
+
+        <Box mt="1.25rem" height="80px" >
           {!tradeWithStableSwap &&
-          !v2Trade &&
-          mmOrderBookTrade?.inputError &&
-          shouldShowMMError(mmOrderBookTrade?.inputError) ? (
+            !v2Trade &&
+            mmOrderBookTrade?.inputError &&
+            shouldShowMMError(mmOrderBookTrade?.inputError) ? (
             <Button width="100%" disabled style={{ textAlign: 'left' }}>
               {parseMMError(mmOrderBookTrade?.inputError)}
             </Button>

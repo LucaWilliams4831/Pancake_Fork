@@ -14,6 +14,7 @@ import Trans from './Trans'
 
 const ButtonGradient = styled(Button)`
   background: linear-gradient(180deg, #7a436e, #7c364c);
+  height:100%;
 `
 
 const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {

@@ -14,15 +14,15 @@ const SwapPage = () => {
 
   return (
     <>
-    <MobileView>
-    <img style={{
+      <MobileView>
+        <img style={{
           position: 'absolute',
           width: '100%',
           height: '100%',
         }}
           alt=''
           src='./images/bg2.png' />
-    </MobileView>
+      </MobileView>
       <SwapFeaturesProvider>
         <Swap />
       </SwapFeaturesProvider>

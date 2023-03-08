@@ -8,11 +8,11 @@ import { SwapFooter } from "./Footer";
 import { SwapInfo, SwapInfoLabel } from "./SwapInfo";
 import { TradePrice } from "./TradePrice";
 
-const SwapSwitchButton = (props: ButtonProps) => (
-  <IconButton className={switchButtonClass} variant="light" scale="sm" {...props}>
-    <ArrowDownIcon className={iconDownClass} color="primary" />
-    {/* <ArrowUpDownIcon className={iconUpDownClass} color="primary" /> */}
-  </IconButton>
+const SwapSwitchButton = (props: ButtonProps) => (  
+    <IconButton className={switchButtonClass} variant="light" scale="sm" {...props}>
+      <ArrowDownIcon className={iconDownClass} color="primary" />
+      {/* <ArrowUpDownIcon className={iconUpDownClass} color="primary" /> */}
+    </IconButton>
 );
 
 const Swap = {

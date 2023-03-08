@@ -34,7 +34,7 @@ const SwitchIconButton: React.FC<React.PropsWithChildren<SwitchIconButtonProps>>
       <AutoRow justify="center" style={{ padding: '0 1rem' }}>
         <StyledButton variant="light" scale="sm" onClick={handleOnClick}>
           <ArrowDownIcon className="icon-down" color={color} />
-          <ArrowUpDownIcon className="icon-up-down" color={color} />
+          {/* <ArrowUpDownIcon className="icon-up-down" color={color} /> */}
         </StyledButton>
       </AutoRow>
     </AutoColumn>
