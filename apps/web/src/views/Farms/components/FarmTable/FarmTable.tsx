@@ -22,7 +22,7 @@ export interface ITableProps {
 const Container = styled.div`
   // width: 100%;
   // background: ${({ theme }) => theme.card.background};
-  background: #0f0c0d;
+  background: linear-gradient(90deg, #090809 0%, #13090c 50%, #090909 100%);
   border-radius: 16px;
   margin: 16px 20px;
   // border: 1px solid ${({ theme }) => theme.colors.cardBorder};

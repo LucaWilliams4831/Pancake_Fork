@@ -5,8 +5,12 @@ import { SwapFeaturesProvider } from '../views/Swap/SwapFeaturesContext'
 
 const MobileView = styled.div`
   @media (max-width: 767px) {
+      width:100%;
+      position:absolute;
     & {
-      display: none;
+      // display: none;
+      
+      height:200%;
     }
   }
 `

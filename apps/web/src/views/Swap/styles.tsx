@@ -5,7 +5,7 @@ export const StyledSwapContainer = styled(Flex)<{ $isChartExpanded: boolean }>`
   flex-shrink: 0;
   // height: fit-content;
   
-  height: 550px;
+  height: 450px;
   padding: 0 24px;
   margin-bottom: 10px;
   align-items:center;

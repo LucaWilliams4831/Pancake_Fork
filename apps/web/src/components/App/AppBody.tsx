@@ -16,7 +16,7 @@ export const BodyWrapper = styled(Card)`
   margin-bottom: 15px;
   background: #000;
   box-shadow: #fff 0px 2px 20px;
-  height:450px;
+  height:420px;
 `
 
 /**

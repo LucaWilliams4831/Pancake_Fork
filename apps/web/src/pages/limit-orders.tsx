@@ -3,8 +3,12 @@ import LimitOrders from '../views/LimitOrders'
 
 const MobileView = styled.div`
   @media (max-width: 767px) {
+      width:100%;
+      position:absolute;
     & {
-      display: none;
+      // display: none;
+      
+      height:200%;
     }
   }
 `

@@ -8,6 +8,7 @@ import {
   UserMenuItem,
   Text,
   NextLinkFromReactRouter,
+  SubMenuItems,
 } from '@pancakeswap/uikit'
 import { useCallback } from 'react'
 import { useSwitchNetwork } from 'hooks/useSwitchNetwork'
@@ -24,7 +25,7 @@ import { useAccount } from 'wagmi'
 import { bsc, mainnet } from 'wagmi/chains'
 
 const NavWrapper = styled(Flex)`
-  background: ${({ theme }) => theme.colors.gradientCardHeader};
+  // background: ${({ theme }) => theme.colors.gradientCardHeader};
   justify-content: space-between;
   padding: 20px 16px;
   flex-direction: column;
@@ -53,8 +54,9 @@ const InfoNav: React.FC<{ isStableSwap: boolean }> = ({ isStableSwap }) => {
   }
   return (
     <NavWrapper>
-      <Flex>
-        <Box>
+      {!account && <NetworkSwitcher activeIndex={activeIndex} />}
+      <Flex >
+        {/* <Box>
           <ButtonMenu activeIndex={activeIndex} scale="sm" variant="subtle">
             <ButtonMenuItem as={NextLinkFromReactRouter} to={`/info${chainPath}${stableSwapQuery}`}>
               {t('Overview')}
@@ -66,13 +68,31 @@ const InfoNav: React.FC<{ isStableSwap: boolean }> = ({ isStableSwap }) => {
               {t('Tokens')}
             </ButtonMenuItem>
           </ButtonMenu>
-        </Box>
-        {!account && <NetworkSwitcher activeIndex={activeIndex} />}
+        </Box> */}
+        <SubMenuItems
+          items={[
+            {
+              label: t('Overview'),
+              href: '/info',
+            },
+            {
+              label: t('Pairs'),
+              href: '/info/pairs',
+            },
+            {
+              label: t('Tokens'),
+              href: '/info/Tokens',
+            },
+          ]}
+          activeItem={isStableSwap ? '/info?type=stableSwap' : '/info'}
+        />
       </Flex>
+      
       <Box width={['100%', '100%', '250px']}>
         <Search />
       </Box>
     </NavWrapper>
+
   )
 }
 

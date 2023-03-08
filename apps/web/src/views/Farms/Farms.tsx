@@ -387,9 +387,9 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
         <div style={{
           borderRadius: '15px',
           width: '100%',
-          background: '#060103',
-          border: '3px solid #5d5c5d',
-          boxShadow: '#5c595c 0px 3px 8px',
+          background: 'linear-gradient(90deg, #000 0%, #060003 50%, #010101 100%)',
+          border: '1px solid #5d5c5d',
+          boxShadow: '#fff 0px 2px 8px',
           display: 'flex',
           flexDirection: 'column',
         }}>

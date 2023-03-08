@@ -6,7 +6,7 @@ const StyledTable = styled.div`
   scroll-margin-top: 64px;
 
   // background-color: ${({ theme }) => theme.card.background};
-  background: #0f080d;
+  background: linear-gradient(90deg, #090809 0%, #13090c 50%, #090909 100%);
   border-radius: 16px;
   margin: 16px 20px;
   > div:not(:last-child) {
@@ -23,8 +23,7 @@ const StyledTableBorder = styled.div`
   border-radius: ${({ theme }) => theme.radii.card};
   // background-color: ${({ theme }) => theme.colors.cardBorder};
   background-color: #060103;
-  border: 3px solid #5d5c5d;
-  box-shadow: #5c595c 0px 3px 8px;
+  
   padding: 1px 1px 3px 1px;
   background-size: 400% 400%;
 `;

@@ -2,8 +2,9 @@ import styled from 'styled-components'
 
 export const ActionContainer = styled.div`
   padding: 16px;
-  border: 2px solid ${({ theme }) => theme.colors.input};
-  border-radius: 16px;
+  // border: 2px solid ${({ theme }) => theme.colors.input};
+  background: linear-gradient(90deg,#0f090d 0%,#13080e 50%,#17090d 100%);
+  border-radius: 12px;
   flex-grow: 1;
   flex-basis: 0;
   margin-bottom: 16px;

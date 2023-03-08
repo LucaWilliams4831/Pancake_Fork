@@ -4,26 +4,30 @@ import Liquidity from '../views/Pool'
 
 const MobileView = styled.div`
   @media (max-width: 767px) {
-    & {
-      display: none;
-    }
+    width:100%;
+    position:absolute;
+  & {
+    // display: none;
+    
+    height:200%;
   }
+}
 `
 const LiquidityPage = () => {
-    return (
-        <>
-          <MobileView>
-            <img style={{
-              position: 'absolute',
-              width: '100%',
-              height: '100%',
-            }}
-              alt=''
-              src='./images/bg2.png' />
-          </MobileView>
-          <Liquidity />
-        </>
-      )
+  return (
+    <>
+      <MobileView>
+        <img style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+        }}
+          alt=''
+          src='./images/bg2.png' />
+      </MobileView>
+      <Liquidity />
+    </>
+  )
 
 }
 

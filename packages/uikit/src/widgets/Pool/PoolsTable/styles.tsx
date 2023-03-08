@@ -4,7 +4,8 @@ import { Flex } from "../../../components";
 export const ActionContainer = styled(Flex)`
   flex-direction: column;
   padding: 16px;
-  border: 2px solid ${({ theme }) => theme.colors.input};
+  // border: 2px solid ${({ theme }) => theme.colors.input};
+  background-color: linear-gradient(90deg, #0f090d 0%, #13080e 50%, #150910 100%);
   border-radius: 16px;
   margin-bottom: 16px;
 
@@ -27,6 +28,7 @@ ActionContainer.defaultProps = {
 
 export const RowActionContainer = styled(ActionContainer)`
   flex-direction: row;
+  
 `;
 
 export const ActionTitles = styled.div`
@@ -38,6 +40,7 @@ export const ActionContent = styled(Flex)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height:50px;
 `;
 
 ActionContent.defaultProps = {

@@ -33,7 +33,7 @@ export const lightColors = {
   backgroundAlt2: '#000',//'rgba(39, 38, 44, 0.7)',
   cardBorder: '#383241',
   contrast: '#FFFFFF',
-  dropdown: '#1E1D20',
+  dropdown: 'linear-gradient(90deg, #000 0%, #060003 50%, #010101 100%)',
   dropdownDeep: '#100C18',
   invertedContrast: '#fff',
   input: '#372F47',
