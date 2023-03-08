@@ -8,8 +8,13 @@ import useAuth from 'hooks/useAuth'
 // eslint-disable-next-line import/extensions
 import { useActiveHandle } from 'hooks/useEagerConnect.bmp.ts'
 import { useMemo, useState } from 'react'
+import styled from 'styled-components'
 import { useConnect } from 'wagmi'
 import Trans from './Trans'
+
+const ButtonGradient = styled(Button)`
+  background: linear-gradient(180deg, #7a436e, #7c364c);
+`
 
 const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
   const handleActive = useActiveHandle()
@@ -36,9 +41,9 @@ const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
 
   return (
     <>
-      <Button onClick={handleClick} {...props}>
+      <ButtonGradient onClick={handleClick} {...props}>
         {children || <Trans>Connect Wallet</Trans>}
-      </Button>
+      </ButtonGradient>
       <WalletModalV2
         docText={t('Learn How to Connect')}
         docLink={docLink}

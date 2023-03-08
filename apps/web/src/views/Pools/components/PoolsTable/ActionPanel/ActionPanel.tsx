@@ -90,7 +90,7 @@ const InfoSection = styled(Box)`
     flex-basis: 230px;
     ${Text} {
       font-size: 14px;
-      color: #fff;
+      // color: #fff;
     }
   }
 `

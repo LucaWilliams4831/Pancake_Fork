@@ -170,13 +170,13 @@ export default function CurrencyInputPanel({
     // <Box position="relative" id={id}>
     <div style={{
       width: '100%',
-      height: '50px',
+      height: '70px',
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
       color: '#F4EEFF',
-      backgroundColor: '#080808',
+      backgroundColor: '#0e0b0c',
       borderRadius:'5px',
     }}>
       <InputPanel>
@@ -297,14 +297,14 @@ export default function CurrencyInputPanel({
               </div>
             </Flex>
           </CurrencySelectButton>
-          {token && tokenAddress ? (
+          {/* {token && tokenAddress ? (
             <Flex style={{ gap: '4px' }} ml="4px" alignItems="center">
-              {/* <CopyButton
+              <CopyButton
                 width="16px"
                 buttonColor="textSubtle"
                 text={tokenAddress}
                 tooltipMessage={t('Token address copied')}
-              /> */}
+              />
               <AddToWalletButton
                 variant="text"
                 p="0"
@@ -316,9 +316,9 @@ export default function CurrencyInputPanel({
                 tokenLogo={token instanceof WrappedTokenInfo ? token.logoURI : undefined}
               />
             </Flex>
-          ) : null}
+          ) : null} */}
         </Flex>
-        {account && (
+        {/* {account && (
           <Text
             onClick={!disabled && onMax}
             color="textSubtle"
@@ -329,7 +329,7 @@ export default function CurrencyInputPanel({
               ? t('Balance: %balance%', { balance: selectedCurrencyBalance?.toSignificant(6) ?? t('Loading') })
               : ' -'}
           </Text>
-        )}
+        )} */}
       </Flex>
     {/* </Box > */}
     </div>

@@ -29,7 +29,7 @@ const PriceChart = ({
       $isExpanded={isChartExpanded}
       $isFullWidthContainer={isFullWidthContainer}
     >
-      <Flex justifyContent="space-between" px="24px">
+      {/* <Flex justifyContent="space-between" px="24px">
         <Flex alignItems="center">
           {outputCurrency ? (
             <DoubleCurrencyLogo currency0={inputCurrency} currency1={outputCurrency} size={24} margin />
@@ -52,7 +52,7 @@ const PriceChart = ({
             </IconButton>
           </Flex>
         )}
-      </Flex>
+      </Flex> */}
       {chartView === ChartViewMode.BASIC && (
         <BasicChart
           token0Address={token0Address}

@@ -29,9 +29,9 @@ const ExpandableSectionButton: React.FC<React.PropsWithChildren<ExpandableSectio
 
   return (
     <Wrapper aria-label={t("Hide or show expandable content")} role="button" onClick={handleOnClick}>
-      {/* <Text color="primary" bold>
+      <Text color="primary" bold>
         {expanded ? t("Hide") : t("Details")}
-      </Text> */}
+      </Text>
       {expanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
     </Wrapper>
   );

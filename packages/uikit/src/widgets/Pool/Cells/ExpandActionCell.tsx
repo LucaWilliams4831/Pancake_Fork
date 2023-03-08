@@ -35,11 +35,11 @@ export const ExpandActionCell: React.FC<React.PropsWithChildren<ExpandActionCell
   const { t } = useTranslation();
   return (
     <StyledCell role="cell">
-      {/* {isFullLayout && (
+      {isFullLayout && (
         <Text color="primary" bold>
           {expanded ? t("Hide") : t("Details")}
         </Text>
-      )} */}
+      )}
       <ArrowIcon color="primary" toggled={expanded} />
     </StyledCell>
   );

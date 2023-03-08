@@ -150,39 +150,57 @@ const config: (
       //   ],
       // },
       {
-        label: '',
+        label: t('ANALYTICS'),
         href: '/info',
+        icon: EarnIcon,
+        fillIcon: EarnFillIcon,
+        image: '/images/ifos/ifo-bunny.png',
+        items: [
+          // {
+          //   label: t('FARMS'),
+          //   href: '/farms',
+          // },
+          // {
+          //   label: t('POOLS'),
+          //   href: '/pools',
+          //   supportChainIds: SUPPORT_ONLY_BSC,
+          // },
+        ].map((item) => addMenuItemSupported(item, chainId)),
+      },
+      {
+        label: '',
+        // href: '',
         icon: MoreIcon,
         hideSubNav: true,
         items: [
-          {
-            label: t('Info'),
-            href: '/info',
-          },
+          // {
+          //   label: t('Info'),
+          //   href: '/info',
+          // },
           // {
           //   label: t('IFO'),
           //   href: '/ifo',
           //   supportChainIds: SUPPORT_ONLY_BSC,
           //   image: '/images/ifos/ifo-bunny.png',
           // },
-          {
-            label: t('VOTING'),
-            href: '/voting',
-            supportChainIds: SUPPORT_ONLY_BSC,
-            image: '/images/voting/voting-bunny.png',
-          },
-          {
-            type: DropdownMenuItemType.DIVIDER,
-          },
+          // {
+          //   label: t('VOTING'),
+          //   href: '/voting',
+          //   supportChainIds: SUPPORT_ONLY_BSC,
+          //   image: '/images/voting/voting-bunny.png',
+          // },
+          // {
+          //   type: DropdownMenuItemType.DIVIDER,
+          // },
           // {
           //   label: t('Leaderboard'),
           //   href: '/teams',
           //   supportChainIds: SUPPORT_ONLY_BSC,
           //   image: '/images/decorations/leaderboard.png',
           // },
-          {
-            type: DropdownMenuItemType.DIVIDER,
-          },
+          // {
+          //   type: DropdownMenuItemType.DIVIDER,
+          // },
           {
             label: t('BLOG'),
             href: 'https://medium.com/pancakeswap',

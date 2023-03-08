@@ -63,7 +63,7 @@ export default function Swap() {
 
   return (
     <Page removePadding={isChartExpanded} hideFooterOnDesktop={isChartExpanded}>
-      <Flex width={['328px', '100%']} height="100%" justifyContent="center" position="relative" alignItems="flex-start">
+      <Flex width="100%" height="100%" justifyContent="center" position="relative" alignItems="center">
         {isDesktop && isChartSupported && (
           <PriceChartContainer
             inputCurrencyId={inputCurrencyId}
@@ -112,7 +112,7 @@ export default function Swap() {
             />
           </Modal>
         </ModalV2>
-        <Flex flexDirection="column">
+        <Flex flexDirection="row">
           <StyledSwapContainer $isChartExpanded={isChartExpanded}>
             <StyledInputCurrencyWrapper mt={isChartExpanded ? '24px' : '0'}>
               <AppBody>

@@ -7,7 +7,9 @@ export const StyledPriceChart = styled(Box)<{
   $isFullWidthContainer?: boolean
 }>`
   border: none;
-  border-radius: 32px;
+  border-radius: 10px;
+  border: 3px solid #403d3f;
+  box-shadow: #fff 0px 2px 20px;
   width: 100%;
   padding-top: 36px;
   ${({ theme }) => theme.mediaQueries.sm} {

@@ -5,6 +5,7 @@ import { BaseButtonProps } from "./types";
 
 const IconButton: PolymorphicComponent<BaseButtonProps, "button"> = styled(Button)<BaseButtonProps>`
   padding: 0;
+  background:transparent;
   width: ${({ scale }) => (scale === "sm" ? "32px" : "48px")};
 `;
 

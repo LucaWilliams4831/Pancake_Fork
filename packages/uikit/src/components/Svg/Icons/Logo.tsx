@@ -5,7 +5,7 @@ import { SvgProps } from "../types";
 const Icon: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
   return (
     <img style={{
-      width: '100px',
+      width: '230px',
     }}
       alt=''
       src='./images/nav-title-light.png' />

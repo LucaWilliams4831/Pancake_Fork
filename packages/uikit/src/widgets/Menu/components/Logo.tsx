@@ -16,8 +16,8 @@ const blink = keyframes`
 const StyledLink = styled("a")`
   display: flex;
   .mobile-icon {
-    width: 32px;
-    ${({ theme }) => theme.mediaQueries.lg} {
+    
+       ${({ theme }) => theme.mediaQueries.lg} {
       display: none;
     }
   }

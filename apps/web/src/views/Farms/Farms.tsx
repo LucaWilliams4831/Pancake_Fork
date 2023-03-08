@@ -385,24 +385,24 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
         </FarmH1>
 
         <div style={{
-          border: '1px solid #0d0b0d',
           borderRadius: '15px',
           width: '100%',
-          background: '#000',
+          background: '#060103',
+          border: '3px solid #5d5c5d',
+          boxShadow: '#5c595c 0px 3px 8px',
           display: 'flex',
           flexDirection: 'column',
-
         }}>
-          <ControlContainer>
-            <ViewControls>
-              <Flex mt="20px">
-                <ToggleView idPrefix="clickFarm" viewMode={viewMode} onToggle={setViewMode} />
-                <Text color="text" fontSize="16px" >
-                  {t('Stake LP tokens and earn Incentive Tokens')}
-                </Text>
-              </Flex>
-              {/* <FarmUI.FarmTabButtons hasStakeInFinishedFarms={stakedInactiveFarms.length > 0} /> */}
-              {/* <Flex mt="20px" ml="16px">
+        <ControlContainer>
+          <ViewControls>
+            <Flex mt="20px">
+              <ToggleView idPrefix="clickFarm" viewMode={viewMode} onToggle={setViewMode} />
+              <Text color="text" fontSize="16px" >
+                {t('Stake LP tokens and earn Incentive Tokens')}
+              </Text>
+            </Flex>
+            {/* <FarmUI.FarmTabButtons hasStakeInFinishedFarms={stakedInactiveFarms.length > 0} /> */}
+            {/* <Flex mt="20px" ml="16px">
               <FarmTypesFilter
                 boostedOnly={boostedOnly}
                 handleSetBoostedOnly={setBoostedOnly}
@@ -421,9 +421,9 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
                 <Text> {t('Staked only')}</Text>
               </ToggleWrapper>
             </Flex> */}
-            </ViewControls>
-            <FilterContainer>
-              {/* <LabelWrapper>
+          </ViewControls>
+          <FilterContainer>
+            {/* <LabelWrapper>
               <Text textTransform="uppercase" color="textSubtle" fontSize="12px" bold>
                 {t('Sort by')}
               </Text>
@@ -457,52 +457,52 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
                 onOptionChange={handleSortOptionChange}
               />
             </LabelWrapper> */}
-              <LabelWrapper style={{ marginLeft: 16 }}>
-                {/* <Text textTransform="uppercase" color="textSubtle" fontSize="12px" bold>
+            <LabelWrapper style={{ marginLeft: 16 }}>
+              {/* <Text textTransform="uppercase" color="textSubtle" fontSize="12px" bold>
                 {t('Search')}
               </Text> */}
-                <SearchInput initialValue={normalizedUrlSearch} onChange={handleChangeQuery} placeholder="Search Farms" />
-              </LabelWrapper>
-            </FilterContainer>
-          </ControlContainer>
-          {isInactive && (
-            <FinishedTextContainer>
-              <Text fontSize={['16px', null, '20px']} color="failure" pr="4px">
-                {t("Don't see the farm you are staking?")}
+              <SearchInput initialValue={normalizedUrlSearch} onChange={handleChangeQuery} placeholder="Search Farms" />
+            </LabelWrapper>
+          </FilterContainer>
+        </ControlContainer>
+        {isInactive && (
+          <FinishedTextContainer>
+            <Text fontSize={['16px', null, '20px']} color="failure" pr="4px">
+              {t("Don't see the farm you are staking?")}
+            </Text>
+            <Flex>
+              <FinishedTextLink href="/migration" fontSize={['16px', null, '20px']} color="failure">
+                {t('Go to migration page')}
+              </FinishedTextLink>
+              <Text fontSize={['16px', null, '20px']} color="failure" padding="0px 4px">
+                or
               </Text>
-              <Flex>
-                <FinishedTextLink href="/migration" fontSize={['16px', null, '20px']} color="failure">
-                  {t('Go to migration page')}
-                </FinishedTextLink>
-                <Text fontSize={['16px', null, '20px']} color="failure" padding="0px 4px">
-                  or
-                </Text>
-                <FinishedTextLink
-                  external
-                  color="failure"
-                  fontSize={['16px', null, '20px']}
-                  href="https://v1-farms.pancakeswap.finance/farms/history"
-                >
-                  {t('check out v1 farms')}.
-                </FinishedTextLink>
-              </Flex>
-            </FinishedTextContainer>
-          )}
-          {viewMode === ViewMode.TABLE ? (
-            <Table farms={chosenFarmsMemoized} cakePrice={cakePrice} userDataReady={userDataReady} />
-          ) : (
-            <FlexLayout>{children}</FlexLayout>
-          )}
-          {account && !userDataLoaded && stakedOnly && (
-            <Flex justifyContent="center">
-              <Loading />
+              <FinishedTextLink
+                external
+                color="failure"
+                fontSize={['16px', null, '20px']}
+                href="https://v1-farms.pancakeswap.finance/farms/history"
+              >
+                {t('check out v1 farms')}.
+              </FinishedTextLink>
             </Flex>
-          )}
-          {poolLength && <div ref={observerRef} />}
-          {/* <StyledImage src="/images/decorations/3dpan.png" alt="Pancake illustration" width={120} height={103} /> */}
-        </div>
-      </Page>
-    </FarmsContext.Provider>
+          </FinishedTextContainer>
+        )}
+        {viewMode === ViewMode.TABLE ? (
+          <Table farms={chosenFarmsMemoized} cakePrice={cakePrice} userDataReady={userDataReady} />
+        ) : (
+          <FlexLayout>{children}</FlexLayout>
+        )}
+        {account && !userDataLoaded && stakedOnly && (
+          <Flex justifyContent="center">
+            <Loading />
+          </Flex>
+        )}
+        {poolLength && <div ref={observerRef} />}
+        {/* <StyledImage src="/images/decorations/3dpan.png" alt="Pancake illustration" width={120} height={103} /> */}
+      </div>
+    </Page>
+    </FarmsContext.Provider >
   )
 }
 
