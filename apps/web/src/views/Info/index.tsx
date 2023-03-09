@@ -32,7 +32,7 @@ export const InfoPageLayout = ({ children }) => {
 
   return (
     <>
-      {/* {chainName === 'BSC' && (
+      {/* {chainName === 'BSC' && ( */}
         <SubMenuItems
           items={[
             {
@@ -50,7 +50,7 @@ export const InfoPageLayout = ({ children }) => {
           ]}
           activeItem={isStableSwap ? '/info?type=stableSwap' : '/info'}
         />
-      )} */}
+      {/* )} */}
 
       <InfoNav isStableSwap={isStableSwap} />
       {children}

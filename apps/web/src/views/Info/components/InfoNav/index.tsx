@@ -55,7 +55,7 @@ const InfoNav: React.FC<{ isStableSwap: boolean }> = ({ isStableSwap }) => {
   return (
     <NavWrapper>
       {/* {!account && <NetworkSwitcher activeIndex={activeIndex} />} */}
-      <Flex >
+      {/* <Flex > */}
         {/* <Box>
           <ButtonMenu activeIndex={activeIndex} scale="sm" variant="subtle">
             <ButtonMenuItem as={NextLinkFromReactRouter} to={`/info${chainPath}${stableSwapQuery}`}>
@@ -69,24 +69,7 @@ const InfoNav: React.FC<{ isStableSwap: boolean }> = ({ isStableSwap }) => {
             </ButtonMenuItem>
           </ButtonMenu>
         </Box> */}
-        <SubMenuItems
-          items={[
-            {
-              label: t('Overview'),
-              href: '/info',
-            },
-            {
-              label: t('Pairs'),
-              href: '/info/pairs',
-            },
-            {
-              label: t('Tokens'),
-              href: '/info/Tokens',
-            },
-          ]}
-          activeItem={isStableSwap ? '/info?type=stableSwap' : '/info'}
-        />
-      </Flex>
+      {/* </Flex> */}
       
       <Box width={['100%', '100%', '250px']}>
         <Search />
