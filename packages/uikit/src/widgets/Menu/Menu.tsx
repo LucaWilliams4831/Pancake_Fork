@@ -187,7 +187,27 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
               )}
             </Flex>
           ) : (
-            <div />
+            <Flex justifyContent="space-around" overflow="hidden">
+              <SubMenuItems
+          items={[
+            {
+              label: 'EXCHANGE',
+              href: '/swap',
+            },
+            {
+              label: 'LIMIT',
+              href: '/limit-orders',
+            },
+            {
+              label: 'LIQUIDITY',
+              href: '/liquidity',
+            },
+          ]}
+          mt={`${totalTopMenuHeight + 1}px`}
+          activeItem={'/swap'}
+        />
+              </Flex>
+        // <div/>
           )}
           <BodyWrapper mt={!subLinks ? `${totalTopMenuHeight + 1}px` : "0"}>
             <Inner>{children}</Inner>

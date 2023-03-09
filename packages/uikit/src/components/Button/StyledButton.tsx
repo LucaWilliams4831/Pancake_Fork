@@ -91,7 +91,7 @@ const StyledButton = styled.button<BaseButtonProps>`
         border-bottom: 20px solid ${decorator.backgroundColor ?? theme.colors.secondary};
         border-left: 34px solid transparent;
         border-right: 12px solid transparent;
-        height: 0;
+        // height: 0;
         top: -1px;
         right: -12px;
         width: 75px;

@@ -26,9 +26,9 @@ import { bsc, mainnet } from 'wagmi/chains'
 
 const NavWrapper = styled(Flex)`
   // background: ${({ theme }) => theme.colors.gradientCardHeader};
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px 16px;
-  flex-direction: column;
+  flex-direction: row;
   gap: 8px;
   ${({ theme }) => theme.mediaQueries.sm} {
     padding: 20px 40px;
@@ -69,11 +69,13 @@ const InfoNav: React.FC<{ isStableSwap: boolean }> = ({ isStableSwap }) => {
             </ButtonMenuItem>
           </ButtonMenu>
         </Box> */}
+
+        <Box width={['100%', '100%', '250px']}>
+          <Search />
+        </Box>
       {/* </Flex> */}
-      
-      <Box width={['100%', '100%', '250px']}>
-        <Search />
-      </Box>
+
+
     </NavWrapper>
 
   )
