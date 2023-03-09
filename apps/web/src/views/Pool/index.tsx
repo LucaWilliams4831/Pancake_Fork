@@ -12,9 +12,12 @@ import { toV2LiquidityToken, useTrackedTokenPairs } from '../../state/user/hooks
 import Dots from '../../components/Loader/Dots'
 import { AppHeader, AppBody } from '../../components/App'
 import Page from '../Page'
-
+// ${({ theme }) => theme.colors.dropdownDeep};
 const Body = styled(CardBody)`
-  background-color: ${({ theme }) => theme.colors.dropdownDeep};
+  background: #0d0a0c;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 10px;
 `
 
 export default function Pool() {

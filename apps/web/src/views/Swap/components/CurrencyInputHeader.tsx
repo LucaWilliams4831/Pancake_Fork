@@ -143,7 +143,7 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
             </ColoredIconButton>
           )}
             <IconButton onClick={onPresentSettingsModal} variant="text" scale="sm" >
-              <ArrowUpDownIcon />
+              <ArrowUpDownIcon color="textSubtle" width="24px"/>
             </IconButton>
           {/* <NotificationDot show={expertMode}>
             <GlobalSettings color="textSubtle" mr="0" mode={SettingsMode.SWAP_LIQUIDITY} />            

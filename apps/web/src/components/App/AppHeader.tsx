@@ -19,7 +19,7 @@ const AppHeaderContainer = styled(Flex)`
   justify-content: space-between;
   padding: 24px;
   width: 100%;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  // border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
 `
 
 const AppHeader: React.FC<React.PropsWithChildren<Props>> = ({ title, subtitle, helper, backTo, noConfig = false }) => {
@@ -46,14 +46,14 @@ const AppHeader: React.FC<React.PropsWithChildren<Props>> = ({ title, subtitle, 
               <Heading as="h2">{title}</Heading>
               {helper && <QuestionHelper text={helper} ml="4px" placement="top-start" />}
             </Flex>
-            {!noConfig && (
+            {/* {!noConfig && (
               <Flex alignItems="center">
                 <NotificationDot show={expertMode}>
                   <GlobalSettings mode={SettingsMode.SWAP_LIQUIDITY} />
                 </NotificationDot>
                 <Transactions />
               </Flex>
-            )}
+            )} */}
           </Flex>
           {/* <Flex alignItems="center">
             <Text color="textSubtle" fontSize="14px">

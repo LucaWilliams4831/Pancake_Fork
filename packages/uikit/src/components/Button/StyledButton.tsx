@@ -54,7 +54,7 @@ const StyledButton = styled.button<BaseButtonProps>`
   display: inline-flex;
   font-family: inherit;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: normal;
   justify-content: center;
   letter-spacing: 0.03em;
   line-height: 1;
@@ -99,7 +99,7 @@ const StyledButton = styled.button<BaseButtonProps>`
         padding-right: 30px;
         line-height: 20px;
         font-size: 12px;
-        font-weight: 400;
+        font-weight: normal;
         transform: rotate(31.17deg);
         color: ${decorator.color ?? "white"};
       }
