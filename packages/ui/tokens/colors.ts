@@ -28,7 +28,7 @@ export const lightColors = {
   secondary: '#fff',
   secondary80: '#9A6AFF80',
   background: '#08060B',
-  backgroundDisabled: '#000',
+  backgroundDisabled: '#fff',
   backgroundAlt: '#000',
   backgroundAlt2: '#000',//'rgba(39, 38, 44, 0.7)',
   cardBorder: '#383241',

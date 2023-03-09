@@ -402,81 +402,86 @@ const LimitOrders = () => {
                       )}
                     </Box> */}
 
+                    <div style={{
+                      height: '5px',
+                      marginTop: "-15px"
+                    }}>
                     <SwitchTokensButton
                       handleSwitchTokens={handleTokenSwitch}
                       color={currencies[Field.INPUT] && currencies[Field.OUTPUT] ? 'primary' : 'text'}
                     />
-                    <CurrencyInputPanel
-                      value={formattedAmounts.output}
-                      onUserInput={handleTypeOutput}
-                      label={independentField === Field.INPUT ? t('To (estimated)') : t('To')}
-                      showMaxButton={false}
-                      currency={currencies.output}
-                      onCurrencySelect={handleOutputSelect}
-                      otherCurrency={currencies.output}
-                      id="limit-order-currency-output"
-                      showCommonBases
-                      commonBasesType={CommonBasesType.SWAP_LIMITORDER}
-                      showUSDPrice
-                    />
-                    {/* <Box>
+                  </div>
+                  <CurrencyInputPanel
+                    value={formattedAmounts.output}
+                    onUserInput={handleTypeOutput}
+                    label={independentField === Field.INPUT ? t('To (estimated)') : t('To')}
+                    showMaxButton={false}
+                    currency={currencies.output}
+                    onCurrencySelect={handleOutputSelect}
+                    otherCurrency={currencies.output}
+                    id="limit-order-currency-output"
+                    showCommonBases
+                    commonBasesType={CommonBasesType.SWAP_LIMITORDER}
+                    showUSDPrice
+                  />
+                  {/* <Box>
                       {isAccessTokenSupported && currencies.output && currencies.output.isToken && (
                         <AccessRisk token={currencies.output} />
                       )}
                     </Box> */}
-                    <LimitOrderPrice
-                      id="limit-order-desired-rate-input"
-                      value={formattedAmounts.price}
-                      onUserInput={handleTypeDesiredRate}
-                      inputCurrency={currencies.input}
-                      outputCurrency={currencies.output}
-                      percentageRateDifference={percentageRateDifference}
-                      rateType={rateType}
-                      handleRateType={handleRateType}
-                      price={price}
-                      handleResetToMarketPrice={handleResetToMarketPrice}
-                      realExecutionPriceAsString={!inputError ? realExecutionPriceAsString : undefined}
-                      disabled={!formattedAmounts.input && !formattedAmounts.output}
-                    />
-                  </AutoColumn>
-                  <Box mt="0.25rem">
-                    {!account ? (
-                      <ConnectWalletButton width="100%" />
-                    ) : showApproveFlow ? (
-                      <Button
-                        variant="primary"
-                        onClick={handleApprove}
-                        id="enable-order-button"
-                        width="100%"
-                        disabled={approvalSubmitted}
-                      >
-                        {approvalSubmitted
-                          ? t('Enabling %asset%', { asset: currencies.input?.symbol })
-                          : t('Enable %asset%', { asset: currencies.input?.symbol })}
-                      </Button>
-                    ) : (
-                      <Button
-                        variant="primary"
-                        onClick={() => {
-                          setSwapState({
-                            tradeToConfirm: trade,
-                            attemptingTxn: false,
-                            swapErrorMessage: undefined,
-                            txHash: undefined,
-                          })
-                          showConfirmModal()
-                        }}
-                        id="place-order-button"
-                        width="100%"
-                        disabled={!!inputError || realExecutionPriceAsString === 'never executes'}
-                      >
-                        {inputError || realExecutionPriceAsString === 'never executes'
-                          ? inputError || t("Can't execute this order")
-                          : t('Place an Order')}
-                      </Button>
-                    )}
-                  </Box>
-                  {/* <Flex mt="16px" justifyContent="center">
+                  <LimitOrderPrice
+                    id="limit-order-desired-rate-input"
+                    value={formattedAmounts.price}
+                    onUserInput={handleTypeDesiredRate}
+                    inputCurrency={currencies.input}
+                    outputCurrency={currencies.output}
+                    percentageRateDifference={percentageRateDifference}
+                    rateType={rateType}
+                    handleRateType={handleRateType}
+                    price={price}
+                    handleResetToMarketPrice={handleResetToMarketPrice}
+                    realExecutionPriceAsString={!inputError ? realExecutionPriceAsString : undefined}
+                    disabled={!formattedAmounts.input && !formattedAmounts.output}
+                  />
+                </AutoColumn>
+                <Box mt="0.25rem">
+                  {!account ? (
+                    <ConnectWalletButton width="100%" />
+                  ) : showApproveFlow ? (
+                    <Button
+                      variant="primary"
+                      onClick={handleApprove}
+                      id="enable-order-button"
+                      width="100%"
+                      disabled={approvalSubmitted}
+                    >
+                      {approvalSubmitted
+                        ? t('Enabling %asset%', { asset: currencies.input?.symbol })
+                        : t('Enable %asset%', { asset: currencies.input?.symbol })}
+                    </Button>
+                  ) : (
+                    <Button
+                      variant="primary"
+                      onClick={() => {
+                        setSwapState({
+                          tradeToConfirm: trade,
+                          attemptingTxn: false,
+                          swapErrorMessage: undefined,
+                          txHash: undefined,
+                        })
+                        showConfirmModal()
+                      }}
+                      id="place-order-button"
+                      width="100%"
+                      disabled={!!inputError || realExecutionPriceAsString === 'never executes'}
+                    >
+                      {inputError || realExecutionPriceAsString === 'never executes'
+                        ? inputError || t("Can't execute this order")
+                        : t('Place an Order')}
+                    </Button>
+                  )}
+                </Box>
+                {/* <Flex mt="16px" justifyContent="center">
                     <Link external href="https://www.gelato.network/">
                       <img
                         src={
@@ -488,42 +493,42 @@ const LimitOrders = () => {
                       />
                     </Link>
                   </Flex> */}
-                </Wrapper>
-              </AppBody>
-            </StyledInputCurrencyWrapper>
-          </StyledSwapContainer>
-          {!isDesktop && (
-            <Flex mt="24px" width="100%">
-              <LimitOrderTable isCompact />
-            </Flex>
-          )}
-          {/* {isSideFooter && (
+              </Wrapper>
+            </AppBody>
+          </StyledInputCurrencyWrapper>
+        </StyledSwapContainer>
+        {!isDesktop && (
+          <Flex mt="24px" width="100%">
+            <LimitOrderTable isCompact />
+          </Flex>
+        )}
+        {/* {isSideFooter && (
             <Box display={['none', null, null, 'block']} width="100%" height="100%">
               <SwapUI.Footer variant="side" helpUrl={LIMIT_ORDERS_DOCS_URL} />
             </Box>
           )} */}
-        </Flex>
       </Flex>
-      {/* Fixed position, doesn't take normal DOM space */}
-      <BottomDrawer
-        content={
-          <PriceChartContainer
-            inputCurrencyId={currencyIds.input}
-            inputCurrency={currencies.input}
-            outputCurrencyId={currencyIds.output}
-            outputCurrency={currencies.output}
-            isChartExpanded={isChartExpanded}
-            setIsChartExpanded={setIsChartExpanded}
-            isChartDisplayed={isChartDisplayed}
-            currentSwapPrice={singleTokenPrice}
-            isFullWidthContainer
-            isMobile
-          />
-        }
-        isOpen={isChartDisplayed}
-        setIsOpen={setIsChartDisplayed}
+    </Flex>
+      {/* Fixed position, doesn't take normal DOM space */ }
+  <BottomDrawer
+    content={
+      <PriceChartContainer
+        inputCurrencyId={currencyIds.input}
+        inputCurrency={currencies.input}
+        outputCurrencyId={currencyIds.output}
+        outputCurrency={currencies.output}
+        isChartExpanded={isChartExpanded}
+        setIsChartExpanded={setIsChartExpanded}
+        isChartDisplayed={isChartDisplayed}
+        currentSwapPrice={singleTokenPrice}
+        isFullWidthContainer
+        isMobile
       />
-    </Page>
+    }
+    isOpen={isChartDisplayed}
+    setIsOpen={setIsChartDisplayed}
+  />
+    </Page >
   )
 }
 

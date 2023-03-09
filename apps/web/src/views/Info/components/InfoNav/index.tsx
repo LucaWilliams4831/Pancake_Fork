@@ -54,7 +54,7 @@ const InfoNav: React.FC<{ isStableSwap: boolean }> = ({ isStableSwap }) => {
   }
   return (
     <NavWrapper>
-      {!account && <NetworkSwitcher activeIndex={activeIndex} />}
+      {/* {!account && <NetworkSwitcher activeIndex={activeIndex} />} */}
       <Flex >
         {/* <Box>
           <ButtonMenu activeIndex={activeIndex} scale="sm" variant="subtle">
