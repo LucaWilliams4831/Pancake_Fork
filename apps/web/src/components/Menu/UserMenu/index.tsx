@@ -19,10 +19,17 @@ import NextLink from 'next/link'
 import { useEffect, useState, useCallback } from 'react'
 import { useProfile } from 'state/profile/hooks'
 import { usePendingTransactions } from 'state/transactions/hooks'
+import styled from 'styled-components'
 import { useAccount } from 'wagmi'
 import ProfileUserMenuItem from './ProfileUserMenuItem'
 import WalletModal, { WalletView } from './WalletModal'
 import WalletUserMenuItem from './WalletUserMenuItem'
+
+const ButtonTopWallet = styled(ConnectWalletButton)`
+  background: linear-gradient(180deg, #7a436e, #7c364c);
+  height:100%;
+  font-size:18px;
+`
 
 const UserMenuItems = () => {
   const { t } = useTranslation()
@@ -110,14 +117,14 @@ const UserMenu = () => {
   }
 
   return (
-    <ConnectWalletButton scale="sm">
+    <ButtonTopWallet scale="xs">
       <Box display={['none', , , 'block']}>
         <Trans>Connect Wallet</Trans>
       </Box>
       <Box display={['block', , , 'none']}>
         <Trans>Connect</Trans>
       </Box>
-    </ConnectWalletButton>
+    </ButtonTopWallet>
   )
 }
 

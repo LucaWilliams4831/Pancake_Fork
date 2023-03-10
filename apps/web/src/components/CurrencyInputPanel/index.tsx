@@ -56,7 +56,7 @@ const InputPanel = styled.div`
 `
 const Container = styled.div<{ zapStyle?: ZapStyle; error?: boolean }>`
   
-  box-shadow: ${({ theme, error }) => theme.shadows[error ? 'warning' : 'inset']};
+  // box-shadow: ${({ theme, error }) => theme.shadows[error ? 'warning' : 'inset']};
   ${({ zapStyle }) =>
     !!zapStyle &&
     css`
@@ -176,7 +176,7 @@ export default function CurrencyInputPanel({
       alignItems: 'center',
       justifyContent: 'center',
       color: '#F4EEFF',
-      background: 'linear-gradient(90deg, #0d0a0c 0%, #0e0b0c 50%, #0b090b 100%)',
+      background: 'linear-gradient(90deg, #0d0b0c 0%, #0d0b0c 50%, #0d0b0c 100%)',
       borderRadius:'5px',
     }}>
       <InputPanel>

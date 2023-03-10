@@ -10,7 +10,7 @@ const Icon: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
 
   return (
     <img style={{
-      width: '20px',
+      width: '25%',
     }}
       alt=''
       src='./images/nav-title-light.png' />

@@ -12,9 +12,9 @@ export const BodyWrapper = styled(Card)`
   }
   
   z-index: 1;
-  border: 3px solid #403d3f;
+  border: 1px solid #403d3f;
   margin-bottom: 15px;
-  background: #000;
+  background: linear-gradient(90deg, #040304 0%, #050303 50%, #020102 100%);
   box-shadow: #fff 0px 2px 20px;
   height:450px;
 `
