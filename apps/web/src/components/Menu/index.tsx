@@ -46,21 +46,22 @@ const Menu = (props) => {
             {/* <NetworkSwitcher /> */}
             <div style={{
               height: '45px',
-              margin: '50px, 0px',
+              margin: '150px, 0px',
             }}>
               <UserMenu />
             </div>
             
-            {/* <div style={{
+            <div style={{
               height: '50px',
               background:'#170c13',
               margin:'10px',
-              paddingTop:'10px',
+              paddingTop:'8px',
               paddingRight:'0px',
-              paddingLeft:'5px',
-            }}> */}
+              paddingLeft:'8px',
+              paddingBottom:'5px',
+            }}>
             <GlobalSettings mode={SettingsMode.GLOBAL} />
-            {/* </div> */}
+            </div>
           </>
         }
         banner={showPhishingWarningBanner && typeof window !== 'undefined'}

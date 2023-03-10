@@ -26,13 +26,13 @@ const Text = styled.div<TextProps>`
   ${typography}
   ${layout}
 
-  ${({ small }) => small && `font-size: 14px;`}
+  ${({ small }) => small && `font-size: 18px;`}
 `;
 
 Text.defaultProps = {
   color: "text",
   small: false,
-  fontSize: "20px",
+  fontSize: "22px",
   ellipsis: false,
 };
 

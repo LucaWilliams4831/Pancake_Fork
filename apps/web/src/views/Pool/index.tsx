@@ -128,15 +128,20 @@ export default function Pool() {
               </Text>
               <Link href="/find" passHref>
                 <Button id="import-pool-link" variant="secondary" scale="sm" as="a">
+                  <div style={{
+                    color:'#fff',
+                  }}>
                   {t('Find other LP tokens')}
+                  </div>
                 </Button>
               </Link>
             </Flex>
           )}
         </Body>
+        {/* startIcon={<AddIcon color="invertedContrast" />} */}
         <CardFooter style={{ textAlign: 'center' }}>
           <Link href="/add" passHref>
-            <Button id="join-pool-button" width="100%" startIcon={<AddIcon color="invertedContrast" />}>
+            <Button id="join-pool-button" width="100%" >
               {t('Add Liquidity')}
             </Button>
           </Link>

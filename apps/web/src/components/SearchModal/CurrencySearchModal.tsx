@@ -29,7 +29,7 @@ import { BAD_SRCS } from '../Logo/constants'
 
 const Footer = styled.div`
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.backgroundAlt};
+  // background-color: ${({ theme }) => theme.colors.backgroundAlt};
   text-align: center;
 `
 const StyledModalContainer = styled(ModalContainer)`
@@ -200,7 +200,11 @@ export default function CurrencySearchModal({
               onClick={() => setModalView(CurrencyModalView.manage)}
               className="list-token-manage-button"
             >
+              <div style={{
+                color: '#fff',
+              }}>
               {t('Manage Tokens')}
+              </div>
             </Button>
           </Footer>
         )}
