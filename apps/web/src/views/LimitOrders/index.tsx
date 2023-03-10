@@ -444,7 +444,7 @@ const LimitOrders = () => {
                     disabled={!formattedAmounts.input && !formattedAmounts.output}
                   />
                 </AutoColumn>
-                <Box mt="0.25rem">
+                <Box mt="0.15rem" height="100px">
                   {!account ? (
                     <ConnectWalletButton width="100%" />
                   ) : showApproveFlow ? (

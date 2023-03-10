@@ -17,14 +17,14 @@ const ExpiredDate = () => {
   })
 
   return (
-    <Flex justifySelf="flex-end" minHeight="16px">
+    <Flex justifyContent="flex-end" minHeight="16px">
       <Text fontSize="14px" small color="textSubtle" mr="4px">
         {t('Expiration Date: %expiryDate%', { expiryDate })}
       </Text>
-      <span ref={targetRef}>
+      {/* <span ref={targetRef}>
         <HelpIcon color="textSubtle" />
         {tooltipVisible && tooltip}
-      </span>
+      </span> */}
     </Flex>
   )
 }

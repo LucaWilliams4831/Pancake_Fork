@@ -12,6 +12,7 @@ const inputRegex = RegExp(`^\\d*(?:\\\\[.])?\\d*$`) // match escaped "." charact
 
 const OrderPriceInput = styled(Input)`
   text-align: right;
+  width: 50%;
 `
 
 const LabelContainer = styled(Flex)`
@@ -77,13 +78,13 @@ const LimitOrderPrice: React.FC<React.PropsWithChildren<LimitOrderPriceProps>> =
         <Text>
           {realExecutionPriceAsString === 'never executes'
             ? t(
-                'Assuming the current gas price, this order will never be executed. Try increasing the number of tokens to swap in your order.',
-              )
+              'Assuming the current gas price, this order will never be executed. Try increasing the number of tokens to swap in your order.',
+            )
             : t('Assuming current gas price it should execute when 1 %assetOneSymbol% = %price% %assetTwoSymbol%', {
-                assetOneSymbol: rateType === Rate.MUL ? inputCurrency?.symbol : outputCurrency?.symbol,
-                assetTwoSymbol: rateType === Rate.MUL ? outputCurrency?.symbol : inputCurrency?.symbol,
-                price: realExecutionPriceAsString,
-              })}
+              assetOneSymbol: rateType === Rate.MUL ? inputCurrency?.symbol : outputCurrency?.symbol,
+              assetTwoSymbol: rateType === Rate.MUL ? outputCurrency?.symbol : inputCurrency?.symbol,
+              price: realExecutionPriceAsString,
+            })}
         </Text>
       )}
     </>,
@@ -105,8 +106,16 @@ const LimitOrderPrice: React.FC<React.PropsWithChildren<LimitOrderPriceProps>> =
 
   return (
     <>
+    <div style={{
+          borderRadius: '10px',
+          width: '100%',
+          padding: '3px',
+          marginBottom: '10px',          
+          background: '#060103',
+          boxShadow: '#5c595c 0px 3px 8px',
+        }}>
       <Flex justifyContent="space-between" id={id}>
-        <Flex alignItems="center">
+        {/* <Flex alignItems="center">
           <Text mr="8px" color="secondary" fontSize="12px" bold textTransform="uppercase">
             {t('Price')}
           </Text>
@@ -126,9 +135,8 @@ const LimitOrderPrice: React.FC<React.PropsWithChildren<LimitOrderPriceProps>> =
           <Text color={priceLabelColor} fontSize="12px">
             {ratePercentageMessage}
           </Text>
-        )}
-      </Flex>
-      <OrderPriceInput
+        )} */}
+        <OrderPriceInput
         value={value}
         disabled={disabled}
         onChange={handleOnChange}
@@ -141,16 +149,22 @@ const LimitOrderPrice: React.FC<React.PropsWithChildren<LimitOrderPriceProps>> =
         type="text"
         inputMode="decimal"
       />
-      {hasCurrencyInfo && (
-        <LabelContainer justifyContent="flex-end" alignItems="center" onClick={toggleRateType}>
-          <Text small bold>
-            {label}
-          </Text>
-          <SyncAltIcon color="textSubtle" width="24px" ml="4px" />
-        </LabelContainer>
-      )}
+        {hasCurrencyInfo && (
+          <LabelContainer justifyContent="flex-end" alignItems="center" onClick={toggleRateType}>
+            <Text small bold>
+              {label}
+            </Text>
+            <SyncAltIcon color="textSubtle" width="24px" ml="4px" />
+          </LabelContainer>
+        )}
+        
+      </Flex>
       <ExpiredDate />
-      <Flex justifySelf="flex-end" mb="8px" minHeight="16px">
+
+      </div>
+      
+
+      {/* <Flex justifySelf="flex-end" mb="8px" minHeight="16px">
         {realExecutionPriceAsString && (
           <>
             <Text small color="textSubtle" mr="4px">
@@ -162,7 +176,7 @@ const LimitOrderPrice: React.FC<React.PropsWithChildren<LimitOrderPriceProps>> =
             </span>
           </>
         )}
-      </Flex>
+      </Flex> */}
     </>
   )
 }
