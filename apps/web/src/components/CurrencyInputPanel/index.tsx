@@ -175,7 +175,7 @@ export default function CurrencyInputPanel({
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
-      color: '#F4EEFF',
+      // color: '#F4EEFF',
       background: 'linear-gradient(90deg, #0d0b0c 0%, #0d0b0c 50%, #0d0b0c 100%)',
       borderRadius:'5px',
     }}>
@@ -198,7 +198,7 @@ export default function CurrencyInputPanel({
             <Flex justifyContent="flex-end" mr="1rem">
               <Flex maxWidth="200px">
                 {Number.isFinite(amountInDollar) ? (
-                  <Text fontSize="12px" color="textSubtle">
+                  <Text fontSize="12px" color="#fff">
                     ~{formatNumber(amountInDollar)} USD
                   </Text>
                 ) : (

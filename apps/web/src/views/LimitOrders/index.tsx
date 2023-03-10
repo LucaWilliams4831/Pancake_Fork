@@ -376,7 +376,7 @@ const LimitOrders = () => {
                   setIsChartDisplayed={setIsChartDisplayed}
                   isChartDisplayed={isChartDisplayed}
                 />
-                <Wrapper id="limit-order-page" style={{ minHeight: '412px' }}>
+                <Wrapper id="limit-order-page" style={{ minHeight: '300px' }}>
                   <AutoColumn gap="sm">
                     <CurrencyInputPanel
                       label={independentField === Field.OUTPUT ? t('From (estimated)') : t('From')}
@@ -444,7 +444,7 @@ const LimitOrders = () => {
                     disabled={!formattedAmounts.input && !formattedAmounts.output}
                   />
                 </AutoColumn>
-                <Box mt="0.15rem" height="100px">
+                <Box mt="0.15rem" height="50px">
                   {!account ? (
                     <ConnectWalletButton width="100%" />
                   ) : showApproveFlow ? (
