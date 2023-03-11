@@ -28,7 +28,11 @@ export const ExpandableLabel: React.FC<React.PropsWithChildren<Props>> = ({ onCl
       onClick={onClick}
       endIcon={expanded ? <ChevronUpIcon color="primary" /> : <ChevronDownIcon color="primary" />}
     >
+      <div style={{
+        color:'#fff',
+      }}>
       {children}
+      </div>
     </Button>
   );
 };

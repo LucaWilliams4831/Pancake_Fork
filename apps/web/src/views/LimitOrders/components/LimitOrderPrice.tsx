@@ -106,16 +106,21 @@ const LimitOrderPrice: React.FC<React.PropsWithChildren<LimitOrderPriceProps>> =
 
   return (
     <>
-    <div style={{
-          borderRadius: '10px',
-          width: '100%',
-          padding: '3px',
-          marginBottom: '10px',          
-          background: '#060103',
-          boxShadow: '#5c595c 0px 3px 8px',
-        }}>
+
       <Flex justifyContent="space-between" id={id}>
-        {/* <Flex alignItems="center">
+        <div style={{
+          width: '100%',
+          height: '50px',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'center',
+          // color: '#F4EEFF',
+          margin:'5px',
+          background: 'linear-gradient(90deg, #0d0b0c 0%, #0d0b0c 50%, #0d0b0c 100%)',
+          borderRadius: '5px',
+        }}>
+          {/* <Flex alignItems="center"> */}
           <Text mr="8px" color="secondary" fontSize="12px" bold textTransform="uppercase">
             {t('Price')}
           </Text>
@@ -130,13 +135,14 @@ const LimitOrderPrice: React.FC<React.PropsWithChildren<LimitOrderPriceProps>> =
               {t('Market')}
             </Text>
           </Button>
-        </Flex>
-        {ratePercentageMessage && (
+          {/* </Flex> */}
+        </div>
+        {/* {ratePercentageMessage && (
           <Text color={priceLabelColor} fontSize="12px">
             {ratePercentageMessage}
           </Text>
         )} */}
-        <OrderPriceInput
+        {/* <OrderPriceInput
         value={value}
         disabled={disabled}
         onChange={handleOnChange}
@@ -148,21 +154,33 @@ const LimitOrderPrice: React.FC<React.PropsWithChildren<LimitOrderPriceProps>> =
         spellCheck="false"
         type="text"
         inputMode="decimal"
-      />
-        {hasCurrencyInfo && (
+      /> */}
+        {/* {hasCurrencyInfo && (
           <LabelContainer justifyContent="flex-end" alignItems="center" onClick={toggleRateType}>
             <Text small bold>
               {label}
             </Text>
             <SyncAltIcon color="textSubtle" width="24px" ml="4px" />
           </LabelContainer>
-        )}
-        
-      </Flex>
-      <ExpiredDate />
+        )} */}
+        <div style={{
+          width: '100%',
+          height: '50px',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'center',
+          margin:'5px',
+          // color: '#F4EEFF',
+          background: 'linear-gradient(90deg, #0d0b0c 0%, #0d0b0c 50%, #0d0b0c 100%)',
+          borderRadius: '5px',
+        }}>
+          <ExpiredDate />
+        </div>
 
-      </div>
-      
+      </Flex>
+
+
 
       {/* <Flex justifySelf="flex-end" mb="8px" minHeight="16px">
         {realExecutionPriceAsString && (

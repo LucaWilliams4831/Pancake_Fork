@@ -51,7 +51,7 @@ const Menu = (props) => {
               <UserMenu />
             </div>
             
-            <div style={{
+            {/* <div style={{
               height: '50px',
               background:'#170c13',
               margin:'10px',
@@ -59,9 +59,9 @@ const Menu = (props) => {
               paddingRight:'0px',
               paddingLeft:'8px',
               paddingBottom:'5px',
-            }}>
+            }}> */}
             <GlobalSettings mode={SettingsMode.GLOBAL} />
-            </div>
+            {/* </div> */}
           </>
         }
         banner={showPhishingWarningBanner && typeof window !== 'undefined'}

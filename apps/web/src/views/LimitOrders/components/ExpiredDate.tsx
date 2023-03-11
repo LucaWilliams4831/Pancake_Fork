@@ -17,9 +17,9 @@ const ExpiredDate = () => {
   })
 
   return (
-    <Flex justifyContent="flex-end" minHeight="16px">
-      <Text fontSize="14px" small color="textSubtle" mr="4px">
-        {t('Expiration Date: %expiryDate%', { expiryDate })}
+    <Flex alignItems="center" justifyContent="center" minHeight="16px">
+      <Text fontSize="8px" small color="#fff" mr="4px">
+        {t('Expires in %expiryDate%', { expiryDate })}
       </Text>
       {/* <span ref={targetRef}>
         <HelpIcon color="textSubtle" />

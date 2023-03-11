@@ -176,7 +176,7 @@ export default function CurrencyInputPanel({
       alignItems: 'center',
       justifyContent: 'center',
       // color: '#F4EEFF',
-      background: 'linear-gradient(90deg, #0d0b0c 0%, #0d0b0c 50%, #0d0b0c 100%)',
+      background: 'linear-gradient(90deg, #0d0b0d 0%, #100c0d 50%, #0d0b0c 100%)',
       borderRadius:'5px',
     }}>
       <InputPanel>

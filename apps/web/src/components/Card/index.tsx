@@ -22,7 +22,7 @@ export const LightCard = styled(Card)`
 
 export const LightGreyCard = styled(Card)`
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
-  background-color: ${({ theme }) => theme.colors.background};
+  background:linear-gradient(90deg,#1a1317 0%,#2b1c20 50%,#180f17 100%);
 `
 
 export const GreyCard = styled(Card)`

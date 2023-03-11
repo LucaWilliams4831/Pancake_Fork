@@ -22,6 +22,7 @@ const TokenSection = styled.div<{ dim?: boolean }>`
   ${({ theme }) => theme.mediaQueries.md} {
     grid-gap: 16px;
   }
+
 `
 
 const CheckIcon = styled(CheckmarkCircleIcon)`

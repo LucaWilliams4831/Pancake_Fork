@@ -16,7 +16,7 @@ export const BodyWrapper = styled(Card)`
   margin-bottom: 15px;
   background: linear-gradient(90deg, #040304 0%, #050303 50%, #020102 100%);
   box-shadow: #fff 0px 2px 20px;
-  height:420px;
+  height:440px;
 `
 
 /**

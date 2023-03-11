@@ -66,7 +66,7 @@ const Pools: React.FC<React.PropsWithChildren> = () => {
         <div style={{
           borderRadius: '15px',
           width: '100%',
-          background: 'linear-gradient(90deg, #000 0%, #060003 50%, #010101 100%)',
+          background: 'linear-gradient(90deg, #010001 0%, #0d0105 50%, #010001 100%)',
           border: '1px solid #5d5c5d',
           boxShadow: '#fff 0px 2px 8px',
           display: 'flex',
@@ -105,9 +105,9 @@ const Pools: React.FC<React.PropsWithChildren> = () => {
                               <CardActions pool={pool} stakedBalance={pool?.userData?.stakedBalance} />
                             ) : (
                               <>
-                                <Text mb="10px" textTransform="uppercase" fontSize="12px" color="textSubtle" bold>
+                                {/* <Text mb="10px" textTransform="uppercase" fontSize="12px" color="textSubtle" bold>
                                   {t('Start earning')}
-                                </Text>
+                                </Text> */}
                                 <ConnectWalletButton />
                               </>
                             )

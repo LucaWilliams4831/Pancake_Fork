@@ -23,6 +23,7 @@ const StyledCard = styled(Card)`
   align-self: baseline;
   max-width: 100%;
   margin: 0 0 24px 0;
+  
   ${({ theme }) => theme.mediaQueries.sm} {
     max-width: 350px;
     margin: 0 12px 46px;
@@ -33,12 +34,14 @@ const FarmCardInnerContainer = styled(Flex)`
   flex-direction: column;
   justify-content: space-around;
   padding: 24px;
+  background: linear-gradient(90deg, #10080c 0%, #291a1f 50%, #0d040b 100%);
 `
 
 const ExpandingWrapper = styled.div`
   padding: 24px;
-  border-top: 2px solid ${({ theme }) => theme.colors.cardBorder};
+  // border-top: 2px solid ${({ theme }) => theme.colors.cardBorder};
   overflow: hidden;
+  background: linear-gradient(90deg, #10080c 0%, #291a1f 50%, #0d040b 100%);
 `
 
 interface FarmCardProps {
@@ -165,7 +168,11 @@ const FarmCard: React.FC<React.PropsWithChildren<FarmCardProps>> = ({
       </FarmCardInnerContainer>
 
       <ExpandingWrapper>
+        <div style={{
+          color:'#fff',
+        }}>
         <ExpandableSectionButton onClick={toggleExpandableSection} expanded={showExpandableSection} />
+        </div>
         {showExpandableSection && (
           <DetailsSection
             removed={removed}
@@ -178,6 +185,7 @@ const FarmCard: React.FC<React.PropsWithChildren<FarmCardProps>> = ({
             auctionHostingEndDate={farm.auctionHostingEndDate}
           />
         )}
+        
       </ExpandingWrapper>
     </StyledCard>
   )

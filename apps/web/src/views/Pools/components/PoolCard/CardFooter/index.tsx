@@ -17,7 +17,7 @@ interface FooterProps {
 
 const ExpandableButtonWrapper = styled(Flex)`
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   button {
     padding: 0;
   }
@@ -43,18 +43,19 @@ const Footer: React.FC<React.PropsWithChildren<FooterProps>> = ({
   return (
     <CardFooter>
       <ExpandableButtonWrapper>
-        <Flex alignItems="center">
-          <PoolTypeTag vaultKey={vaultKey} isLocked={isLocked} account={account}>
+        <Flex justifyContent="center">
+          {/* <PoolTypeTag vaultKey={vaultKey} isLocked={isLocked} account={account}>
             {(targetRef) => (
               <Flex ref={targetRef}>
                 <HelpIcon ml="4px" width="20px" height="20px" color="textSubtle" />
               </Flex>
             )}
-          </PoolTypeTag>
-        </Flex>
-        <ExpandableLabel expanded={isExpanded} onClick={() => setIsExpanded(!isExpanded)}>
+          </PoolTypeTag> */}
+          <ExpandableLabel expanded={isExpanded} onClick={() => setIsExpanded(!isExpanded)}>
           {isExpanded ? t('Hide') : t('Details')}
         </ExpandableLabel>
+        </Flex>
+        
       </ExpandableButtonWrapper>
       {isExpanded && (
         <ExpandedWrapper flexDirection="column">

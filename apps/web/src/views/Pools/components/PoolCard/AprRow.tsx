@@ -19,9 +19,9 @@ const AprRow: React.FC<React.PropsWithChildren<AprRowProps>> = ({
 }) => {
   return (
     <Pool.AprRowWithToolTip>
-      <Apr pool={pool} stakedBalance={stakedBalance} performanceFee={performanceFee} showIcon={showIcon} />
+      <Apr pool={pool} stakedBalance={stakedBalance} performanceFee={performanceFee}  />
     </Pool.AprRowWithToolTip>
   )
 }
-
+// showIcon={showIcon}
 export default AprRow

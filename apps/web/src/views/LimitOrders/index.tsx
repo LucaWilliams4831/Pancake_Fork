@@ -371,12 +371,12 @@ const LimitOrders = () => {
             <StyledInputCurrencyWrapper>
               <AppBody>
                 <CurrencyInputHeader
-                  title={t('Limit')}
+                  title={t('Limit order')}
                   subtitle={t('Place a limit order to trade at a set price')}
                   setIsChartDisplayed={setIsChartDisplayed}
                   isChartDisplayed={isChartDisplayed}
                 />
-                <Wrapper id="limit-order-page" style={{ minHeight: '300px' }}>
+                <Wrapper id="limit-order-page" style={{ minHeight: '250px' }}>
                   <AutoColumn gap="sm">
                     <CurrencyInputPanel
                       label={independentField === Field.OUTPUT ? t('From (estimated)') : t('From')}

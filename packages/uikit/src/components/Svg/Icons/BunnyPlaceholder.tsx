@@ -10,10 +10,10 @@ const Icon: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
 
   return (
     <img style={{
-      width: '25%',
+      width: '30px',
     }}
       alt=''
-      src='./images/nav-title-light.png' />
+      src='./images/coin.png' />
     // <Svg viewBox="0 0 72 72" {...props}>
     //   <path
     //     d="M72 36C72 55.8823 55.8823 72 36 72C16.1177 72 0 55.8823 0 36C0 16.1177 16.1177 0 36 0C55.8823 0 72 16.1177 72 36Z"
